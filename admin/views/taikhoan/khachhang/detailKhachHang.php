@@ -50,7 +50,7 @@
                                 </tr>
                                 <tr>
                                     <th>Trạng thái: </th>
-                                    <th style="color: <?= $khachHang['trang_thai'] == 1 ? 'green' : 'red' ?>;">
+                                    <th>
                                         <?= $khachHang['trang_thai'] == 1 ? 'Hoạt động' : 'Không hoạt động'  ?? '' ?>
                                     </th>
                                 </tr>

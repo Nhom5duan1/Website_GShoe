@@ -44,7 +44,7 @@
                                             <td><?= $quanTri['ho_ten'] ?></td>
                                             <td><?= $quanTri['email'] ?></td>
                                             <td><?= $quanTri['so_dien_thoai'] ?></td>
-                                            <td style="color: <?= $quanTri['trang_thai'] == 1 ? 'green' : 'red' ?>;">
+                                            <td>
                                                 <?= $quanTri['trang_thai'] == 1 ? 'Hoạt động' : 'Không hoạt động'?>
                                             </td>
                                             <td>

@@ -44,7 +44,7 @@
                                             </td>
                                             <td><?= $khachHang['email'] ?></td>
                                             <td><?= $khachHang['so_dien_thoai'] ?></td>
-                                            <td style="color: <?= $khachHang['trang_thai'] == 1 ? 'green' : 'red' ?>;">
+                                            <td>
                                                 <?= $khachHang['trang_thai'] == 1 ? 'Hoạt động' : 'Không hoạt động'?>
                                             </td>
                                             <td>
