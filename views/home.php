@@ -1,7 +1,6 @@
 <?php include_once 'layout/header.php'; ?><!-- header -->
 <?php include_once 'layout/menu.php'; ?><!-- menu -->
 
-
 <!-- Start Phần slider -->
 <section class="hero-area">
     <div class="container">
