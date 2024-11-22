@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Quản lý danh sách thú cưng</h1>
+                    <h1>Quản lý danh sách sản phẩm</h1>
                 </div>
                 <!-- <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -27,7 +27,7 @@
                     <div class="card">
                         <div class="card-header">
                             <a href="<?= BASE_URL_ADMIN . '?act=form-them-san-pham' ?>">
-                                <button class="btn btn-success">Thêm thú cưng mới</button>
+                                <button class="btn btn-success">Thêm sản phẩm</button>
                             </a>
                         </div>
                         <!-- /.card-header -->
@@ -51,8 +51,7 @@
                                             <td><?= $key + 1 ?></td>
                                             <td><?= $sanPham['ten_san_pham'] ?></td>
                                             <td>
-                                                <img src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" style="width:100px"
-                                                    alt="">
+                                                <img src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" style="width:100px" alt="">
                                             </td>
                                             <td><?= $sanPham['gia_san_pham'] ?></td>
                                             <td><?= $sanPham['so_luong'] ?></td>
@@ -100,7 +99,7 @@
     $(function () {
         $("#example1").DataTable({
             "responsive": true, "lengthChange": false, "autoWidth": false,
-            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
         $('#example2').DataTable({
             "paging": true,
