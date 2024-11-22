@@ -10,37 +10,18 @@
                     <!-- Start Hero Slider -->
                     <div class="hero-slider">
                         <!-- Start Single Slider -->
-                        <div class="single-slider"
-                            style="background-image: url(https://giaysneaker.store/media/magefan_blog/nike-air-max-1-pure-platinum-manh-ghep-moi-cho-thao-luan-ve-mot-xuan-2024.jpg);">
-                            <div class="content">
-                                <h2><span>No restocking fee ($35 savings)</span>
-                                    M75 Sport Watch
-                                </h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut
-                                    labore dolore magna aliqua.</p>
-                                <h3><span>Now Only</span> $320.99</h3>
-                                <div class="button">
-                                    <a href="product-grids.html" class="btn">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="single-slider" style="background-image: url(assets/images/banner/nike1.webp);"></div>
                         <!-- End Single Slider -->
+
                         <!-- Start Single Slider -->
-                        <div class="single-slider"
-                            style="background-image: url(https://thuvienmuasam.com/uploads/default/original/2X/b/b3d40b8882cb75fafb40758216dea6187fa15453.jpeg);">
-                            <div class="content">
-                                <h2><span>Big Sale Offer</span>
-                                    Get the Best Deal on CCTV Camera
-                                </h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut
-                                    labore dolore magna aliqua.</p>
-                                <h3><span>Combo Only:</span> $590.00</h3>
-                                <div class="button">
-                                    <a href="product-grids.html" class="btn">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="single-slider" style="background-image: url(assets/images/banner/nike2.webp);"></div>
                         <!-- End Single Slider -->
+
+                        <!-- Start Single Slider -->
+                        <div class="single-slider" style="background-image: url(assets/images/banner/nike3.webp);"></div>
+                        <!-- End Single Slider -->
+
+                        
                     </div>
                     <!-- End Hero Slider -->
                 </div>
