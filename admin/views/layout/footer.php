@@ -1,8 +1,8 @@
 <footer class="main-footer">
             <div class="float-right d-none d-sm-block">
-                byDEV <b>PHÙNG NGỌC DŨNG</b>
+                byDEV <b>Nhóm 5 Dự án 1</b>
             </div>
-            <strong>Copyright &copy; <a href="https://adminlte.io">Phùng Ngọc Dũng</a>.</strong>
+            <strong>Copyright &copy; <a href="https://adminlte.io">Nhóm 5 Dự án 1</a>.</strong>
         </footer>
 
         <!-- Control Sidebar -->
