@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PetPalace Admin Management</title>
+    <title>GShoe Admin Management</title>
     <link rel="icon"
-        href="https://png.pngtree.com/png-vector/20230426/ourmid/pngtree-veterinary-logo-pet-shop-dog-and-cat-white-design-beagle-puppy-vector-png-image_6731394.png"
+        href="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQctOoBFw6B_0nAI0Vuu54WeruuFvunNP6Fm8ri5N2ksrPnwkot"
         type="image/x-icon" />
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -25,5 +25,5 @@
     <div class="wrapper"></div>
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center">
-        <h3 class="animation__wobble" style="height: 60;width: 60;"><b>PetPalace</b></h3>
+        <h3 class="animation__wobble" style="height: 60;width: 60;"><b>GShop</b></h3>
     </div>

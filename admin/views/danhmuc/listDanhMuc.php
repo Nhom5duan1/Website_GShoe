@@ -10,12 +10,7 @@
                 <div class="col-sm-6">
                     <h1>Quản lý danh mục sản phẩm</h1>
                 </div>
-                <!-- <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">DataTables</li>
-                            </ol>
-                        </div> -->
+                
             </div>
         </div><!-- /.container-fluid -->
     </section>
@@ -84,7 +79,7 @@
     $(function () {
         $("#example1").DataTable({
             "responsive": true, "lengthChange": false, "autoWidth": false,
-            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
         $('#example2').DataTable({
             "paging": true,
