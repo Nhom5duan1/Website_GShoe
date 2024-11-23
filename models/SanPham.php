@@ -20,6 +20,17 @@ class SanPham
             echo "Lỗi: " . $e->getMessage();
         }
     }
+    public function getAllDanhMuc()
+    {
+        try {
+            $sql = 'SELECT * FROM danh_mucs';
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetchAll();
+        } catch (Exception $e) {
+            echo "Lỗi: " . $e->getMessage();
+        }
+    }
     public function getDetailSanPham($id)
     {
         try {
@@ -52,7 +63,7 @@ class SanPham
     public function getBinhLuanFromSanPham($id)
     {
         try {
-            $sql = 'SELECT binh_luans.*, tai_khoans.ho_ten	
+            $sql = 'SELECT binh_luans.*, tai_khoans.ho_ten, tai_khoans.anh_dai_dien	
             FROM binh_luans 
             INNER JOIN tai_khoans ON binh_luans.tai_khoan_id = tai_khoans.id 
             WHERE binh_luans.san_pham_id = :id';
@@ -90,31 +101,20 @@ class SanPham
             echo "Lỗi: " . $e->getMessage();
         }
     }
-    public function getAllDanhMuc()
+
+    public function sanPhamTheo($id)
     {
         try {
-            $sql = 'SELECT * FROM danh_mucs';
+            $sql = 'SELECT danh_mucs.*, san_phams.ten_san_pham 
+                FROM danh_mucs
+                INNER JOIN san_phams ON danh_mucs.id = san_phams.danh_muc_id
+                WHERE danh_mucs.id = :id';
             $stmt = $this->conn->prepare($sql);
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
-            return $stmt->fetchAll();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (Exception $e) {
             echo "Lỗi: " . $e->getMessage();
         }
     }
-    public function sanPhamTheo($id)
-{
-    try {
-        $sql = 'SELECT danh_mucs.*, san_phams.ten_san_pham 
-                FROM danh_mucs
-                INNER JOIN san_phams ON danh_mucs.id = san_phams.danh_muc_id
-                WHERE danh_mucs.id = :id';
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    } catch (Exception $e) {
-        echo "Lỗi: " . $e->getMessage();
-    }
-}
-
 }

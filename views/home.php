@@ -21,7 +21,7 @@
                         <div class="single-slider" style="background-image: url(assets/images/banner/nike3.webp);"></div>
                         <!-- End Single Slider -->
 
-                        
+
                     </div>
                     <!-- End Hero Slider -->
                 </div>
@@ -43,113 +43,37 @@
                 </div>
             </div>
         </div>
+        <!-- /////////////////// -->
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Start Single Category -->
-                <div class="single-category">
-                    <h3 class="heading">TV & Audios</h3>
-                    <ul>
-                        <li><a href="product-grids.html">Smart Television</a></li>
-                        <li><a href="product-grids.html">QLED TV</a></li>
-                        <li><a href="product-grids.html">Audios</a></li>
-                        <li><a href="product-grids.html">Headphones</a></li>
-                        <li><a href="product-grids.html">View All</a></li>
-                    </ul>
-                    <div class="images">
-                        <img src="assets/images/featured-categories/fetured-item-1.png" alt="#">
+            <?php foreach ($listDanhMuc as $danhMuc): ?>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Start Single Category -->
+                    <div class="single-category">
+
+                        <h3 class="heading"><?= $danhMuc['ten_danh_muc'] ?></h3>
+                        <ul>
+                            <li><a href="product-grids.html"></a></li>
+                            <li><a href="product-grids.html"></a></li>
+                            <li><a href="product-grids.html"></a></li>
+                            <li><a href="product-grids.html"></a></li>
+                            <li><a href="product-grids.html"></a></li>
+                        </ul>
+
+                        <div class="images">
+                            <img style="width: 201px; height: 204px;" src="<?= $danhMuc['anh'] ?>" alt="#">
+                        </div>
                     </div>
+                    <!-- End Single Category -->
                 </div>
-                <!-- End Single Category -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Start Single Category -->
-                <div class="single-category">
-                    <h3 class="heading">Desktop & Laptop</h3>
-                    <ul>
-                        <li><a href="product-grids.html">Smart Television</a></li>
-                        <li><a href="product-grids.html">QLED TV</a></li>
-                        <li><a href="product-grids.html">Audios</a></li>
-                        <li><a href="product-grids.html">Headphones</a></li>
-                        <li><a href="product-grids.html">View All</a></li>
-                    </ul>
-                    <div class="images">
-                        <img src="assets/images/featured-categories/fetured-item-2.png" alt="#">
-                    </div>
-                </div>
-                <!-- End Single Category -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Start Single Category -->
-                <div class="single-category">
-                    <h3 class="heading">Cctv Camera</h3>
-                    <ul>
-                        <li><a href="product-grids.html">Smart Television</a></li>
-                        <li><a href="product-grids.html">QLED TV</a></li>
-                        <li><a href="product-grids.html">Audios</a></li>
-                        <li><a href="product-grids.html">Headphones</a></li>
-                        <li><a href="product-grids.html">View All</a></li>
-                    </ul>
-                    <div class="images">
-                        <img src="assets/images/featured-categories/fetured-item-3.png" alt="#">
-                    </div>
-                </div>
-                <!-- End Single Category -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Start Single Category -->
-                <div class="single-category">
-                    <h3 class="heading">Dslr Camera</h3>
-                    <ul>
-                        <li><a href="product-grids.html">Smart Television</a></li>
-                        <li><a href="product-grids.html">QLED TV</a></li>
-                        <li><a href="product-grids.html">Audios</a></li>
-                        <li><a href="product-grids.html">Headphones</a></li>
-                        <li><a href="product-grids.html">View All</a></li>
-                    </ul>
-                    <div class="images">
-                        <img src="assets/images/featured-categories/fetured-item-4.png" alt="#">
-                    </div>
-                </div>
-                <!-- End Single Category -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Start Single Category -->
-                <div class="single-category">
-                    <h3 class="heading">Smart Phones</h3>
-                    <ul>
-                        <li><a href="product-grids.html">Smart Television</a></li>
-                        <li><a href="product-grids.html">QLED TV</a></li>
-                        <li><a href="product-grids.html">Audios</a></li>
-                        <li><a href="product-grids.html">Headphones</a></li>
-                        <li><a href="product-grids.html">View All</a></li>
-                    </ul>
-                    <div class="images">
-                        <img src="assets/images/featured-categories/fetured-item-5.png" alt="#">
-                    </div>
-                </div>
-                <!-- End Single Category -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Start Single Category -->
-                <div class="single-category">
-                    <h3 class="heading">Game Console</h3>
-                    <ul>
-                        <li><a href="product-grids.html">Smart Television</a></li>
-                        <li><a href="product-grids.html">QLED TV</a></li>
-                        <li><a href="product-grids.html">Audios</a></li>
-                        <li><a href="product-grids.html">Headphones</a></li>
-                        <li><a href="product-grids.html">View All</a></li>
-                    </ul>
-                    <div class="images">
-                        <img src="assets/images/featured-categories/fetured-item-6.png" alt="#">
-                    </div>
-                </div>
-                <!-- End Single Category -->
-            </div>
+            <?php endforeach ?>
         </div>
+        <!-- /////////////////////////////////// -->
+
+
     </div>
 </section>
 <!-- End Phần danh mục sản phẩm -->
+
 
 <!-- Start Phần Top sản phẩm -->
 <section class="trending-product section">
@@ -164,19 +88,20 @@
             </div>
         </div>
         <div class="row">
+            <?php foreach ($listSanPham as $key => $sanPham): ?>
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Single Product -->
                 <div class="single-product">
                     <div class="product-image">
-                        <img src="assets/images/products/product-1.jpg" alt="#">
+                        <img style="width: 288px; height: 286.40px; " src="<?= BASE_URL . $sanPham['hinh_anh']; ?>" alt="#">
                         <div class="button">
                             <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
                         </div>
                     </div>
                     <div class="product-info">
-                        <span class="category">Watches</span>
+                        <span class="category"><?= $sanPham['ten_danh_muc']?></span>
                         <h4 class="title">
-                            <a href="product-grids.html">Xiaomi Mi Band 5</a>
+                            <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>"><?= $sanPham['ten_san_pham'] ?></a>
                         </h4>
                         <ul class="review">
                             <li><i class="lni lni-star-filled"></i></li>
@@ -187,220 +112,14 @@
                             <li><span>4.0 Review(s)</span></li>
                         </ul>
                         <div class="price">
-                            <span>$199.00</span>
+                            <span><?= formatPrice($sanPham['gia_san_pham']) . 'đ' ?></span>
                         </div>
                     </div>
                 </div>
                 <!-- End Single Product -->
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Product -->
-                <div class="single-product">
-                    <div class="product-image">
-                        <img src="assets/images/products/product-2.jpg" alt="#">
-                        <span class="sale-tag">-25%</span>
-                        <div class="button">
-                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <span class="category">Speaker</span>
-                        <h4 class="title">
-                            <a href="product-grids.html">Big Power Sound Speaker</a>
-                        </h4>
-                        <ul class="review">
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><span>5.0 Review(s)</span></li>
-                        </ul>
-                        <div class="price">
-                            <span>$275.00</span>
-                            <span class="discount-price">$300.00</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Product -->
-                <div class="single-product">
-                    <div class="product-image">
-                        <img src="assets/images/products/product-3.jpg" alt="#">
-                        <div class="button">
-                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <span class="category">Camera</span>
-                        <h4 class="title">
-                            <a href="product-grids.html">WiFi Security Camera</a>
-                        </h4>
-                        <ul class="review">
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><span>5.0 Review(s)</span></li>
-                        </ul>
-                        <div class="price">
-                            <span>$399.00</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Product -->
-                <div class="single-product">
-                    <div class="product-image">
-                        <img src="assets/images/products/product-4.jpg" alt="#">
-                        <span class="new-tag">New</span>
-                        <div class="button">
-                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <span class="category">Phones</span>
-                        <h4 class="title">
-                            <a href="product-grids.html">iphone 6x plus</a>
-                        </h4>
-                        <ul class="review">
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><span>5.0 Review(s)</span></li>
-                        </ul>
-                        <div class="price">
-                            <span>$400.00</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Product -->
-                <div class="single-product">
-                    <div class="product-image">
-                        <img src="assets/images/products/product-5.jpg" alt="#">
-                        <div class="button">
-                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <span class="category">Headphones</span>
-                        <h4 class="title">
-                            <a href="product-grids.html">Wireless Headphones</a>
-                        </h4>
-                        <ul class="review">
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><span>5.0 Review(s)</span></li>
-                        </ul>
-                        <div class="price">
-                            <span>$350.00</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Product -->
-                <div class="single-product">
-                    <div class="product-image">
-                        <img src="assets/images/products/product-6.jpg" alt="#">
-                        <div class="button">
-                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <span class="category">Speaker</span>
-                        <h4 class="title">
-                            <a href="product-grids.html">Mini Bluetooth Speaker</a>
-                        </h4>
-                        <ul class="review">
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star"></i></li>
-                            <li><span>4.0 Review(s)</span></li>
-                        </ul>
-                        <div class="price">
-                            <span>$70.00</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Product -->
-                <div class="single-product">
-                    <div class="product-image">
-                        <img src="assets/images/products/product-7.jpg" alt="#">
-                        <span class="sale-tag">-50%</span>
-                        <div class="button">
-                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <span class="category">Headphones</span>
-                        <h4 class="title">
-                            <a href="product-grids.html">PX7 Wireless Headphones</a>
-                        </h4>
-                        <ul class="review">
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star"></i></li>
-                            <li><span>4.0 Review(s)</span></li>
-                        </ul>
-                        <div class="price">
-                            <span>$100.00</span>
-                            <span class="discount-price">$200.00</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Product -->
-                <div class="single-product">
-                    <div class="product-image">
-                        <img src="assets/images/products/product-8.jpg" alt="#">
-                        <div class="button">
-                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <span class="category">Laptop</span>
-                        <h4 class="title">
-                            <a href="product-grids.html">Apple MacBook Air</a>
-                        </h4>
-                        <ul class="review">
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><span>5.0 Review(s)</span></li>
-                        </ul>
-                        <div class="price">
-                            <span>$899.00</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-            </div>
+            <?php endforeach?>
+            
         </div>
     </div>
 </section>
@@ -551,30 +270,11 @@
         </div>
         <div class="brands-logo-wrapper">
             <div class="brands-logo-carousel d-flex align-items-center justify-content-between">
+                <?php foreach($listDanhMuc as $anhDanhMuc):?>
                 <div class="brand-logo">
-                    <img src="assets/images/brands/01.png" alt="#">
+                    <img src="<?= $anhDanhMuc['anh']?>" alt="#">
                 </div>
-                <div class="brand-logo">
-                    <img src="assets/images/brands/02.png" alt="#">
-                </div>
-                <div class="brand-logo">
-                    <img src="assets/images/brands/03.png" alt="#">
-                </div>
-                <div class="brand-logo">
-                    <img src="assets/images/brands/04.png" alt="#">
-                </div>
-                <div class="brand-logo">
-                    <img src="assets/images/brands/05.png" alt="#">
-                </div>
-                <div class="brand-logo">
-                    <img src="assets/images/brands/06.png" alt="#">
-                </div>
-                <div class="brand-logo">
-                    <img src="assets/images/brands/03.png" alt="#">
-                </div>
-                <div class="brand-logo">
-                    <img src="assets/images/brands/04.png" alt="#">
-                </div>
+                <?php endforeach?>
             </div>
         </div>
     </div>
@@ -713,5 +413,5 @@
     </div>
 </section>
 <!-- End Phần ship & hỗ trợ -->
- 
+
 <?php include_once 'layout/footer.php'; ?><!-- footer -->

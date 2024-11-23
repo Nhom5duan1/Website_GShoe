@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/css/tiny-slider.css" />
     <link rel="stylesheet" href="assets/css/glightbox.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    
 </head>
 
 <body>
@@ -47,7 +48,7 @@
                     <!-- Logo -->
                     <div class="col-lg-3 col-md-3 col-7">
                         <!-- Start Header Logo -->
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="<?= BASE_URL?>">
                             <img src="assets/images/logo/logo.svg" alt="">
                         </a>
                         <!-- End Header Logo -->
