@@ -18,8 +18,8 @@ match ($act) {
     'chi-tiet-san-pham' => (new HomeController())->chiTietSanPham(),
     // auth
     'login' => (new HomeController())->formLogin(),
-    'register' => (new HomeController())->formregister(),
-    'check-login-register' =>(new HomeController())->postLoginRegister(),
+    'register' => (new HomeController())->formRegister(),
+    'check-login' =>(new HomeController())->postLogin(),
     'logout' =>(new HomeController())->logout(),
     'detail-account-khach-hang' => (new HomeController())->detailAccountKhachHang(),
     'list-product' => (new HomeController())->listProduct(),

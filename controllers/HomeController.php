@@ -37,13 +37,12 @@ class HomeController
         
         deleteSessionE();
     }
-    public function formregister()
+    public function formRegister()
     {
         require_once './views/auth/register.php';
-        
         deleteSessionE();
     }
-    public function postLoginRegister()
+    public function postLogin()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Lấy email và password gửi lên từ form 
@@ -62,7 +61,7 @@ class HomeController
                 $_SESSION['e'] = $user;
                 // var_dump($_SESSION['e']);die();
                 $_SESSION['flash'] == true;
-                header("Location:" . BASE_URL . '?act=login-register');
+                header("Location:" . BASE_URL . '?act=login');
                 exit();
             }
         }
