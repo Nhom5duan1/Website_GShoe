@@ -49,7 +49,7 @@ class HomeController
             $email = $_POST['email'];
             $password = $_POST['password'];
             // var_dump($password); die();
-            // xử lý kiểm tra thông tinn đăng nhập
+            // xử lý kiểm tra thông tin đăng nhập
             $user = $this->modelTaiKhoan->checkLogin($email, $password);
             if ($user == $email) { // trường hợp đăng nhập thành công
                 // lưu thông tin vào session 
