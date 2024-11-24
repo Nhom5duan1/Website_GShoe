@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -16,7 +17,7 @@
     <link rel="stylesheet" href="assets/css/tiny-slider.css" />
     <link rel="stylesheet" href="assets/css/glightbox.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    
+
 </head>
 
 <body>
@@ -48,7 +49,7 @@
                     <!-- Logo -->
                     <div class="col-lg-3 col-md-3 col-7">
                         <!-- Start Header Logo -->
-                        <a class="navbar-brand" href="<?= BASE_URL?>">
+                        <a class="navbar-brand" href="<?= BASE_URL ?>">
                             <img src="assets/images/logo/logo.svg" alt="">
                         </a>
                         <!-- End Header Logo -->
@@ -157,21 +158,30 @@
                                     </a>
                                     <!-- Shopping Item -->
                                     <div class="shopping-item">
-                                        <div class="bottom">
-                                            <div class="button">
-                                                <a href="register.html" class="btn animate">Đăng ký</a>
+                                        <?php if (isset($_SESSION['user-account'])) { ?>
+                                            <div class="bottom">
+                                                <div class="button">
+                                                    <a href="<?= BASE_URL . '?act=detail-account-khach-hang' ?>" class="btn animate">Tài khoản</a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="bottom">
-                                            <div class="button">
-                                                <a href="login.html" class="btn animate">Đăng nhập</a>
+                                            <div class="bottom">
+                                                <div class="button">
+                                                    <a href="<?= BASE_URL . '?act=logout' ?>" class="btn animate">Đăng xuất</a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="bottom">
-                                            <div class="button">
-                                                <a href="checkout.html" class="btn animate">Đăng xuất</a>
+
+                                        <?php } else { ?>
+                                            <div class="bottom">
+                                                <div class="button">
+                                                    <a href=" <?= BASE_URL . '?act=login-register' ?>" class="btn animate">Đăng nhập</a>
+                                                </div>
                                             </div>
-                                        </div>
+                                            <div class="bottom">
+                                                <div class="button">
+                                                    <a href=" <?= BASE_URL . '?act=login-register' ?>" class="btn animate">Đăng xuất</a>
+                                                </div>
+                                            </div>
+                                        <?php } ?>
                                     </div>
                                     <!--/ End Shopping Item -->
 

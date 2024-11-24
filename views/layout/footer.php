@@ -17,8 +17,9 @@
                         <div class="col-lg-9 col-md-8 col-12">
                             <div class="footer-newsletter">
                                 <h4 class="title">
-                                    Subscribe to our Newsletter
-                                    <span>Get all the latest information, Sales and Offers.</span>
+                                Đăng ký nhận bản tin của chúng tôi
+                                
+                                    <span>Nhận tất cả các thông tin mới nhất, Bán hàng và Ưu đãi.</span>
                                 </h4>
                                 <div class="newsletter-form-head">
                                     <form action="#" method="get" target="_blank" class="newsletter-form">
