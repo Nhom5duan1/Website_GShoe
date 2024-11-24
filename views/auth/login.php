@@ -47,7 +47,7 @@
                             <div class="button">
                                 <button class="btn" type="submit">Login</button>
                             </div>
-                            <p class="outer-link">Don't have an account? <a href="register.html">Register here </a>
+                            <p class="outer-link">Bạn chưa có tài khoản? <a href="<?= BASE_URL . '?act=register' ?>">Đăng ký</a>
                             </p>
                         </div>
                     </form>

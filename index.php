@@ -17,7 +17,8 @@ match ($act) {
     '/' => (new HomeController())->home(),
     'chi-tiet-san-pham' => (new HomeController())->chiTietSanPham(),
     // auth
-    'login-register' => (new HomeController())->formLoginRegister(),
+    'login' => (new HomeController())->formLogin(),
+    'register' => (new HomeController())->formregister(),
     'check-login-register' =>(new HomeController())->postLoginRegister(),
     'logout' =>(new HomeController())->logout(),
     'detail-account-khach-hang' => (new HomeController())->detailAccountKhachHang(),

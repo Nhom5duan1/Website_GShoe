@@ -173,12 +173,12 @@
                                         <?php } else { ?>
                                             <div class="bottom">
                                                 <div class="button">
-                                                    <a href=" <?= BASE_URL . '?act=login-register' ?>" class="btn animate">Đăng nhập</a>
+                                                    <a href=" <?= BASE_URL . '?act=login' ?>" class="btn animate">Đăng nhập</a>
                                                 </div>
                                             </div>
                                             <div class="bottom">
                                                 <div class="button">
-                                                    <a href=" <?= BASE_URL . '?act=login-register' ?>" class="btn animate">Đăng xuất</a>
+                                                    <a href=" <?= BASE_URL . '?act=register' ?>" class="btn animate">Đăng xuất</a>
                                                 </div>
                                             </div>
                                         <?php } ?>

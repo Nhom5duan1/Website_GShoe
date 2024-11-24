@@ -31,9 +31,16 @@ class HomeController
             exit();
         }
     }
-    public function formLoginRegister()
+    public function formLogin()
     {
-        require_once './views/auth/login-register.php';
+        require_once './views/auth/login.php';
+        
+        deleteSessionE();
+    }
+    public function formregister()
+    {
+        require_once './views/auth/register.php';
+        
         deleteSessionE();
     }
     public function postLoginRegister()
