@@ -105,7 +105,7 @@
                                     <div class="shopping-item">
                                         <div class="dropdown-cart-header">
                                             <span>2 Items</span>
-                                            <a href="cart.html">View Cart</a>
+                                            <a href="<?= BASE_URL . '?act=cart'?>">Xem giỏ hàng</a>
                                         </div>
                                         <ul class="shopping-list">
                                             <li>
@@ -141,7 +141,7 @@
                                                 <span class="total-amount">$134.00</span>
                                             </div>
                                             <div class="button">
-                                                <a href="checkout.html" class="btn animate">Checkout</a>
+                                                <a href="<?= BASE_URL . '?act=thanh-toan'?>" class="btn animate">Thanh toán</a>
                                             </div>
                                         </div>
                                     </div>

@@ -23,4 +23,6 @@ match ($act) {
     'logout' =>(new HomeController())->logout(),
     'detail-account-khach-hang' => (new HomeController())->detailAccountKhachHang(),
     'list-product' => (new HomeController())->listProduct(),
+    'cart' => (new HomeController())->cart(),
+    'thanh-toan' => (new HomeController())->thanhToan(),
 };

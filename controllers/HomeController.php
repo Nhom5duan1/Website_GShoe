@@ -84,4 +84,10 @@ class HomeController
         $SanPhamDanhMucId = $this->modelSanPham->sanPhamTheo($listDanhMuc['danh_muc_id']);
         require_once './views/listSanPham.php';
     }
+    public function cart(){
+        require_once './views/cart.php';
+    }
+    public function thanhToan(){
+        require_once './views/thanhToan.php';
+    }
 }
