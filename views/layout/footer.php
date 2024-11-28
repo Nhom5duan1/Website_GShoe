@@ -23,9 +23,9 @@
                                 </h4>
                                 <div class="newsletter-form-head">
                                     <form action="#" method="get" target="_blank" class="newsletter-form">
-                                        <input name="EMAIL" placeholder="Email address here..." type="email">
+                                        <input name="EMAIL" placeholder="Địa chỉ email ở đây..." type="email">
                                         <div class="button">
-                                            <button class="btn">Subscribe<span class="dir-part"></span></button>
+                                            <button class="btn">Đăng ký<span class="dir-part"></span></button>
                                         </div>
                                     </form>
                                 </div>
@@ -44,7 +44,7 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer f-contact">
-                                <h3>Get In Touch With Us</h3>
+                                <h3>Liên hệ với chúng tôi</h3>
                                 <p class="phone">Phone: +1 (900) 33 169 7720</p>
                                 <ul>
                                     <li><span>Monday-Friday: </span> 9.00 am - 8.00 pm</li>
@@ -59,7 +59,7 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer our-app">
-                                <h3>Our Mobile App</h3>
+                                <h3>Ứng dụng di động của chúng tôi</h3>
                                 <ul class="app-btn">
                                     <li>
                                         <a href="javascript:void(0)">
