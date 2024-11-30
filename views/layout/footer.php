@@ -82,13 +82,13 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer f-link">
-                                <h3>Information</h3>
+                                <h3>Về Chúng Tôi</h3>
                                 <ul>
-                                    <li><a href="javascript:void(0)">About Us</a></li>
-                                    <li><a href="javascript:void(0)">Contact Us</a></li>
-                                    <li><a href="javascript:void(0)">Downloads</a></li>
-                                    <li><a href="javascript:void(0)">Sitemap</a></li>
-                                    <li><a href="javascript:void(0)">FAQs Page</a></li>
+                                    <li><a href="javascript:void(0)">Giới thiệu</a></li>
+                                    <li><a href="javascript:void(0)">Chính sách đổi trả</a></li>
+                                    <li><a href="javascript:void(0)">Chính sách bảo hành</a></li>
+                                    <li><a href="javascript:void(0)">Liên hệ</a></li>
+                                    <li><a href="javascript:void(0)">Chính sách bảo mật</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->
@@ -98,11 +98,11 @@
                             <div class="single-footer f-link">
                                 <h3>Bộ Phận Cửa Hàng</h3>
                                 <ul>
-                                    <li><a href="javascript:void(0)">Sneakers & Running Shoes</a></li>
-                                    <li><a href="javascript:void(0)">Formal Shoes</a></li>
-                                    <li><a href="javascript:void(0)">Sandals & Slippers</a></li>
-                                    <li><a href="javascript:void(0)">Boots</a></li>
-                                    <li><a href="javascript:void(0)">Athletic Footwear</a></li>
+                                    <li><a href="javascript:void(0)">Giày Sneakers & Giày Chạy Bộ</a></li>
+                                    <li><a href="javascript:void(0)">Giày Trang Trọng</a></li>
+                                    <li><a href="javascript:void(0)">Giày Sandal & Dép</a></li>
+                                    <li><a href="javascript:void(0)">Giày Bốt</a></li>
+                                    <li><a href="javascript:void(0)">Giày Thể Thao</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->
