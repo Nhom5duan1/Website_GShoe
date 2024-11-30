@@ -47,8 +47,8 @@
                                 <h3>Liên hệ với chúng tôi</h3>
                                 <p class="phone">Phone: +84 33 169 772</p>
                                 <ul>
-                                    <li><span>Monday-Friday: </span> 9.00 am - 8.00 pm</li>
-                                    <li><span>Saturday: </span> 10.00 am - 6.00 pm</li>
+                                    <li><span>Thứ 2-Thứ 6: </span> 9.00 am - 8.00 pm</li>
+                                    <li><span>Thứ 7: </span> 10.00 am - 6.00 pm</li>
                                 </ul>
                                 <p class="mail">
                                     <a href="mailto:support@gmail.com">support@gmail.com</a>
@@ -96,13 +96,13 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer f-link">
-                                <h3>Shop Departments</h3>
+                                <h3>Bộ Phận Cửa Hàng</h3>
                                 <ul>
-                                    <li><a href="javascript:void(0)">Computers & Accessories</a></li>
-                                    <li><a href="javascript:void(0)">Smartphones & Tablets</a></li>
-                                    <li><a href="javascript:void(0)">TV, Video & Audio</a></li>
-                                    <li><a href="javascript:void(0)">Cameras, Photo & Video</a></li>
-                                    <li><a href="javascript:void(0)">Headphones</a></li>
+                                    <li><a href="javascript:void(0)">Sneakers & Running Shoes</a></li>
+                                    <li><a href="javascript:void(0)">Formal Shoes</a></li>
+                                    <li><a href="javascript:void(0)">Sandals & Slippers</a></li>
+                                    <li><a href="javascript:void(0)">Boots</a></li>
+                                    <li><a href="javascript:void(0)">Athletic Footwear</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->
@@ -119,14 +119,14 @@
                     <div class="row align-items-center">
                         <div class="col-lg-4 col-12">
                             <div class="payment-gateway">
-                                <span>We Accept:</span>
+                                <span>Chúng tôi tiếp nhận:</span>
                                 <img src="assets/images/footer/credit-cards-footer.png" alt="#">
                             </div>
                         </div>
                         <div class="col-lg-4 col-12">
                             <div class="copyright">
                                 <p>Designed and Developed by<a href="https://graygrids.com/" rel="nofollow"
-                                        target="_blank">GrayGrids</a></p>
+                                        target="_blank">Team 5</a></p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-12">
