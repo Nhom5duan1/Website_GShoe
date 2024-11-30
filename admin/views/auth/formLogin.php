@@ -21,7 +21,7 @@
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">
       <div class="card-header text-center">
-        <a href="./assets/index2.html" class="h1">BÁN THÚ CƯNG</a>
+        <a href="./assets/index2.html" class="h1">Đăng nhập admin </a>
       </div>
       <div class="card-body">
         <?php if (isset($_SESSION['e'])) { ?>
