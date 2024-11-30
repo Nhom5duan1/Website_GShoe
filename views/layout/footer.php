@@ -45,13 +45,13 @@
                             <!-- Single Widget -->
                             <div class="single-footer f-contact">
                                 <h3>Liên hệ với chúng tôi</h3>
-                                <p class="phone">Phone: +1 (900) 33 169 7720</p>
+                                <p class="phone">Phone: +84 33 169 772</p>
                                 <ul>
-                                    <li><span>Monday-Friday: </span> 9.00 am - 8.00 pm</li>
-                                    <li><span>Saturday: </span> 10.00 am - 6.00 pm</li>
+                                    <li><span>Thứ 2-Thứ 6: </span> 9.00 am - 8.00 pm</li>
+                                    <li><span>Thứ 7: </span> 10.00 am - 6.00 pm</li>
                                 </ul>
                                 <p class="mail">
-                                    <a href="mailto:support@shopgrids.com">support@shopgrids.com</a>
+                                    <a href="mailto:support@gmail.com">support@gmail.com</a>
                                 </p>
                             </div>
                             <!-- End Single Widget -->
@@ -82,13 +82,13 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer f-link">
-                                <h3>Information</h3>
+                                <h3>Về Chúng Tôi</h3>
                                 <ul>
-                                    <li><a href="javascript:void(0)">About Us</a></li>
-                                    <li><a href="javascript:void(0)">Contact Us</a></li>
-                                    <li><a href="javascript:void(0)">Downloads</a></li>
-                                    <li><a href="javascript:void(0)">Sitemap</a></li>
-                                    <li><a href="javascript:void(0)">FAQs Page</a></li>
+                                    <li><a href="javascript:void(0)">Giới thiệu</a></li>
+                                    <li><a href="javascript:void(0)">Chính sách đổi trả</a></li>
+                                    <li><a href="javascript:void(0)">Chính sách bảo hành</a></li>
+                                    <li><a href="javascript:void(0)">Liên hệ</a></li>
+                                    <li><a href="javascript:void(0)">Chính sách bảo mật</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->
@@ -96,13 +96,13 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer f-link">
-                                <h3>Shop Departments</h3>
+                                <h3>Bộ Phận Cửa Hàng</h3>
                                 <ul>
-                                    <li><a href="javascript:void(0)">Computers & Accessories</a></li>
-                                    <li><a href="javascript:void(0)">Smartphones & Tablets</a></li>
-                                    <li><a href="javascript:void(0)">TV, Video & Audio</a></li>
-                                    <li><a href="javascript:void(0)">Cameras, Photo & Video</a></li>
-                                    <li><a href="javascript:void(0)">Headphones</a></li>
+                                    <li><a href="javascript:void(0)">Giày Sneakers & Giày Chạy Bộ</a></li>
+                                    <li><a href="javascript:void(0)">Giày Trang Trọng</a></li>
+                                    <li><a href="javascript:void(0)">Giày Sandal & Dép</a></li>
+                                    <li><a href="javascript:void(0)">Giày Bốt</a></li>
+                                    <li><a href="javascript:void(0)">Giày Thể Thao</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->
@@ -119,14 +119,14 @@
                     <div class="row align-items-center">
                         <div class="col-lg-4 col-12">
                             <div class="payment-gateway">
-                                <span>We Accept:</span>
+                                <span>Chúng tôi tiếp nhận:</span>
                                 <img src="assets/images/footer/credit-cards-footer.png" alt="#">
                             </div>
                         </div>
                         <div class="col-lg-4 col-12">
                             <div class="copyright">
                                 <p>Designed and Developed by<a href="https://graygrids.com/" rel="nofollow"
-                                        target="_blank">GrayGrids</a></p>
+                                        target="_blank">Team 5</a></p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-12">
