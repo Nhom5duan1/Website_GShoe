@@ -1,12 +1,11 @@
 <?php include_once 'layout/header.php'; ?><!-- header -->
-<?php include_once 'layout/menu.php'; ?><!-- menu -->
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="breadcrumbs-content">
-                        <h1 class="page-title">Cart</h1>
+                        <h1 class="page-title">Giỏ hàng</h1>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12">
@@ -32,19 +31,19 @@
 
                         </div>
                         <div class="col-lg-4 col-md-3 col-12">
-                            <p>Product Name</p>
+                            <p>Tên sản phẩm</p>
                         </div>
                         <div class="col-lg-2 col-md-2 col-12">
-                            <p>Quantity</p>
+                            <p>Số lượng</p>
                         </div>
                         <div class="col-lg-2 col-md-2 col-12">
-                            <p>Subtotal</p>
+                            <p>Giá sản phẩm</p>
                         </div>
                         <div class="col-lg-2 col-md-2 col-12">
-                            <p>Discount</p>
+                            <p>Giảm giá</p>
                         </div>
                         <div class="col-lg-1 col-md-2 col-12">
-                            <p>Remove</p>
+                            <p>Xóa</p>
                         </div>
                     </div>
                 </div>
@@ -169,9 +168,9 @@
                                 <div class="left">
                                     <div class="coupon">
                                         <form action="#" target="_blank">
-                                            <input name="Coupon" placeholder="Enter Your Coupon">
+                                            <input name="Coupon" placeholder="Nhập mã giảm giá(nếu có)">
                                             <div class="button">
-                                                <button class="btn">Apply Coupon</button>
+                                                <button class="btn">Sử dụng mã giảm giá</button>
                                             </div>
                                         </form>
                                     </div>
@@ -180,14 +179,13 @@
                             <div class="col-lg-4 col-md-6 col-12">
                                 <div class="right">
                                     <ul>
-                                        <li>Cart Subtotal<span>11.270.000đ</span></li>
-                                        <li>Shipping<span>Free</span></li>
-                                        <li>You Save<span>118.000đ</span></li>
-                                        <li class="last">You Pay<span>11.152.000đ</span></li>
+                                        <li>Giá khuyến mãi<span>10.000.000đ</span></li>
+                                        <li>Phí giao hàng<span>Free</span></li>
+                                        <li class="last">Thành tiền<span>10.000.000đ</span></li>
                                     </ul>
                                     <div class="button">
-                                        <a href="checkout.html" class="btn">Checkout</a>
-                                        <a href="product-grids.html" class="btn btn-alt">Continue shopping</a>
+                                        <a href="<?= BASE_URL . '?act=thanh-toan'?>" class="btn">Thanh toán</a>
+                                        <a href="<?= BASE_URL . '?act=list-product'?>" class="btn btn-alt">Tiếp tục mua sắm</a>
                                     </div>
                                 </div>
                             </div>

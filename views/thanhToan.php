@@ -1,5 +1,4 @@
 <?php include_once 'layout/header.php'; ?><!-- header -->
-<?php include_once 'layout/menu.php'; ?><!-- menu -->
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
         <div class="container">
