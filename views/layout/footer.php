@@ -45,13 +45,13 @@
                             <!-- Single Widget -->
                             <div class="single-footer f-contact">
                                 <h3>Liên hệ với chúng tôi</h3>
-                                <p class="phone">Phone: +1 (900) 33 169 7720</p>
+                                <p class="phone">Phone: +84 33 169 772</p>
                                 <ul>
                                     <li><span>Monday-Friday: </span> 9.00 am - 8.00 pm</li>
                                     <li><span>Saturday: </span> 10.00 am - 6.00 pm</li>
                                 </ul>
                                 <p class="mail">
-                                    <a href="mailto:support@shopgrids.com">support@shopgrids.com</a>
+                                    <a href="mailto:support@gmail.com">support@gmail.com</a>
                                 </p>
                             </div>
                             <!-- End Single Widget -->
