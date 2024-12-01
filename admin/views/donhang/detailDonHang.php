@@ -9,7 +9,7 @@
         <div class="col-sm-4">
           <h1>Quản lý đơn hàng - Đơn hàng <b style="color:gray"><?= $donHang['ma_don_hang'] ?></b></h1>
         </div>
-        <div class="col-sm-4">  
+        <div class="col-sm-4">
           <form action="<?= BASE_URL_ADMIN . '?act=sua-don-hang' ?>" method="POST" style="display: flex; gap: 10px;">
             <input type="hidden" name="don_hang_id" value="<?= $donHang['id']; ?>" /> <!-- bắn lại id đơn hàng  -->
             <select class="form-control" name="trang_thai_id">
@@ -50,10 +50,17 @@
               <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
             </symbol>
           </svg>
-          <?php if ($donHang['trang_thai_id'] >= 1 && $donHang['trang_thai_id'] <= 4) {
+          <!-- warning -- vàng 1, 3 5
+
+              primary -- xanh dương 2 4 6 7 8
+
+              success -- xanh lá 9
+
+              danger -- đỏ 10 11 -->
+          <?php if (in_array($donHang['trang_thai_id'], [1, 3, 5])) {
             $colorAlerts = 'warning';
             $iconI = 'fas fa-spinner';
-          } elseif ($donHang['trang_thai_id'] >= 5 && $donHang['trang_thai_id'] <= 8) {
+          } elseif (in_array($donHang['trang_thai_id'], [2, 4, 6, 7, 8])) {
             $colorAlerts = 'primary';
             $iconSvg = 'check-circle-fill';
           } elseif ($donHang['trang_thai_id'] == 9) {
@@ -202,7 +209,7 @@
             <!-- this row will not appear when printing -->
             <div class="row no-print">
               <div class="col-12">
-                <a href="<?= BASE_URL_ADMIN . '?act=print&id_don_hang='. $donHang['id']?>" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a>
+                <a href="<?= BASE_URL_ADMIN . '?act=print&id_don_hang=' . $donHang['id'] ?>" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a>
               </div>
             </div>
           </div>

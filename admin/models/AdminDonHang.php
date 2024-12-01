@@ -104,23 +104,32 @@ class AdminDonHang
             echo "Loi: " . $e->getMessage();
         }
     }
-    public function updateDonHang($id, $trang_thai_id)
+    public function updateDonHang($id, $ten_nguoi_nhan, $sdt_nguoi_nhan, $email_nguoi_nhan, $dia_chi_nguoi_nhan, $ghi_chu)
     {
         try {
             $sql = 'UPDATE don_hangs SET 
-                trang_thai_id = :trang_thai_id
-                WHERE id = :id';
+            ten_nguoi_nhan = :ten_nguoi_nhan, 
+            sdt_nguoi_nhan = :sdt_nguoi_nhan, 
+            email_nguoi_nhan = :email_nguoi_nhan, 
+            dia_chi_nguoi_nhan = :dia_chi_nguoi_nhan, 
+            ghi_chu = :ghi_chu
+            WHERE id = :id';
 
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([
-                'id' => $id,
-                'trang_thai_id' => $trang_thai_id,
+                'ten_nguoi_nhan' => $ten_nguoi_nhan,
+                'sdt_nguoi_nhan' => $sdt_nguoi_nhan,
+                'email_nguoi_nhan' => $email_nguoi_nhan,
+                'dia_chi_nguoi_nhan' => $dia_chi_nguoi_nhan,
+                'ghi_chu' => $ghi_chu,
+                'id' => $id
             ]);
             return true;
         } catch (Exception $e) {
             echo "Loi: " . $e->getMessage();
         }
     }
+
 
 
     //     public function updateSanPham($san_pham_id, $ten_san_pham, $gia_san_pham, $gia_khuyen_mai, $so_luong, $ngay_nhap, $danh_muc_id, $trang_thai, $mo_ta, $hinh_anh)

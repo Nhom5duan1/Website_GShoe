@@ -111,26 +111,45 @@
 
 
 
-Chưa xác nhận
-
-Đã xác nhân
-
-Chưa thanh toán
-
-Đã thanh toán
-
-Đang chuẩn bị hàng
-
-Đang giao
-
-Đã giao
-
-Đã nhận
-
-Thành công
-
-Hoàn hàng
-
-Hủy đơn
+Chưa xác nhận 1
 
 
+Đã xác nhân 2
+
+
+Chưa thanh toán 3
+
+
+Đã thanh toán 4
+
+
+Đang chuẩn bị hàng 5
+
+
+Đang giao 6
+
+
+Đã giao 7
+
+
+Đã nhận 8
+
+
+Thành công 9
+
+
+Hoàn hàng -- 10
+
+
+Hủy đơn -- 11
+
+
+
+
+warning -- vàng   1, 3 5 
+
+primary -- xanh dương 2 4 6 7 8 
+
+success -- xanh lá 9
+
+danger -- đỏ 10 11
