@@ -145,54 +145,139 @@ class AdminTaiKhoanController
             }
         }
     }
-    public function detailKhachHang(){
+    public function resetPassword()
+    {
+        $tai_khoan_id = $_GET['id_quan_tri'];
+        $tai_khoan = $this->modelTaiKhoan->getDetailTaiKhoan($tai_khoan_id);
+        // đặt password mặc định 123@123ab
+        $password = password_hash('123@123ab', PASSWORD_BCRYPT);
+        $status = $this->modelTaiKhoan->resetPassword($tai_khoan_id, $password);
+        // var_dump($status); die;
+        if ($status && $tai_khoan['chuc_vu_id'] == 1) {
+            header("Location: " . BASE_URL_ADMIN . '?act=list-tai-khoan-quan-tri');
+            exit();
+        } elseif ($status && $tai_khoan['chuc_vu_id'] == 2) {
+            header("Location:" . BASE_URL_ADMIN . '?act=list-tai-khoan-khach-hang');
+            exit();
+        } else {
+            var_dump('Lỗi khi reset tai khoan');
+        }
+    }
+    public function detailKhachHang()
+    {
         $id_khach_hang = $_GET['id_khach_hang'];
         $khachHang = $this->modelTaiKhoan->getDetailTaiKhoan($id_khach_hang);
 
         $listBinhLuan = $this->modelSanPham->getBinhLuanFromKhachHang($id_khach_hang);
         require_once './views/taikhoan/khachhang/detailKhachHang.php';
     }
-    public function formLogin(){
+    public function formLogin()
+    {
         require_once './views/auth/formLogin.php';
         deleteSessionE();
     }
-    public function login(){
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    public function login()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Lấy email và password gửi lên từ form 
             $email = $_POST['email'];
             $password = $_POST['password'];
             // var_dump($password); die();
             // xử lý kiểm tra thông tinn đăng nhập
             $user = $this->modelTaiKhoan->checkLogin($email, $password);
-            if($user == $email){ // trường hợp đăng nhập thành công
+            if ($user == $email) { // trường hợp đăng nhập thành công
                 // lưu thông tin vào session 
                 $_SESSION['user-admin'] = $user;
                 header("Location:" . BASE_URL_ADMIN);
                 exit();
-            }else{
+            } else {
                 // Lỗi thì lưu vào session
                 $_SESSION['e'] = $user;
                 // var_dump($_SESSION['e']);die();
                 $_SESSION['flash'] == true;
-                header("Location:". BASE_URL_ADMIN . '?act=login-admin');
+                header("Location:" . BASE_URL_ADMIN . '?act=login-admin');
                 exit();
             }
         }
     }
-    public function logout(){
-        if(isset($_SESSION['user-admin'])){
+    public function logout()
+    {
+        if (isset($_SESSION['user-admin'])) {
             unset($_SESSION['user-admin']);
-            header("Location:" . BASE_URL_ADMIN .'?act=login-admin');
+            header("Location:" . BASE_URL_ADMIN . '?act=login-admin');
         }
     }
-    public function formEditCaNhanQuanTri(){
+    public function formEditCaNhanQuanTri()
+    {
+        $email = $_SESSION['user-admin'];
+        $thongTin = $this->modelTaiKhoan->getTaiKhoanFormEmail($email);
+        // var_dump($thongTin);die;
         require_once './views/taikhoan/canhan/editCaNhan.php';
         deleteSessionE();
     }
-    public function postEditCaNhanQuanTri(){
+    public function postEditCaNhanQuanTri() {}
+    public function postEditMatKhauCaNhan()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $old_pass = $_POST['old_pass'];
+            $new_pass = $_POST['new_pass'];
+            $confirm_pass = $_POST['confirm_pass'];
 
-    }
-    public function postEditMatKhauCaNhan(){
-        
+            $user = $this->modelTaiKhoan->getTaiKhoanFormEmail($_SESSION['user-admin']);
+            $e = [];
+            $checkPass = false; // Biến kiểm tra mật khẩu
+            $isPlaintext = false; // Xác định mật khẩu trong DB là plaintext
+
+            // Kiểm tra mật khẩu cũ
+            if (password_verify($old_pass, $user['mat_khau'])) {
+                // Nếu khớp với hash
+                $checkPass = true;
+            } elseif ($old_pass === $user['mat_khau']) {
+                // Nếu khớp với plaintext
+                $checkPass = true;
+                $isPlaintext = true;
+            }
+
+            // Xử lý lỗi
+            if (!$checkPass) {
+                $e['old_pass'] = 'Mật khẩu cũ không đúng';
+            }
+            if (empty($old_pass)) {
+                $e['old_pass'] = 'Không được để trống';
+            }
+            if (empty($new_pass)) {
+                $e['new_pass'] = 'Không được để trống';
+            }
+            if (empty($confirm_pass)) {
+                $e['confirm_pass'] = 'Không được để trống';
+            }
+            if ($new_pass !== $confirm_pass) {
+                $e['confirm_pass'] = 'Mật khẩu nhập vào không trùng khớp';
+            }
+            // var_dump($e);die;
+            // Nếu không có lỗi
+            if (empty($e)) {
+                $hashPass = password_hash($new_pass, PASSWORD_BCRYPT);
+
+                // Nếu mật khẩu cũ là plaintext, chuyển thành hash
+                if ($isPlaintext) {
+                    $hashedOldPass = password_hash($old_pass, PASSWORD_BCRYPT);
+                    $this->modelTaiKhoan->resetPassword($user['id'], $hashedOldPass);
+                }
+
+                // Cập nhật mật khẩu mới
+                $status = $this->modelTaiKhoan->resetPassword($user['id'], $hashPass);
+                if ($status) {
+                    $_SESSION['success'] = "Đã đổi mật khẩu thành công";
+                    header("Location:" . BASE_URL_ADMIN . '?act=form-sua-thong-tin-ca-nhan-quan-tri');
+                    exit();
+                }
+            } else {
+                // Lưu lỗi vào session và chuyển hướng lại form
+                $_SESSION['error'] = $e;
+                header("Location:" . BASE_URL_ADMIN . '?act=form-sua-thong-tin-ca-nhan-quan-tri');
+                exit();
+            }
+        }
     }
 }

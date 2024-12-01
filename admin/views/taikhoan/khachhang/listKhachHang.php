@@ -51,7 +51,7 @@
                                                 <div class="btn-group" style="gap: 5px">
                                                     <a href="<?= BASE_URL_ADMIN .  '?act=chi-tiet-khach-hang&id_khach_hang=' . $khachHang['id'] ?>"><button class="btn btn-primary"><i class="far fa-eye"></i></button></a>
                                                     <a href="<?= BASE_URL_ADMIN .  '?act=form-sua-khach-hang&id_khach_hang=' . $khachHang['id'] ?>"><button class="btn btn-warning"><i class="far fa-edit"></i></button></a>
-                                                    <a href="<?= BASE_URL_ADMIN .  '?act=xoa-danh-muc&id_danh_muc=' . $khachHang['id'] ?>"><button class="btn btn-danger" onclick="return confirm('Xác Nhận Xóa Vĩnh Viễn Danh Mục.')">RESET PASSWORD</button></a>
+                                                    <a href="#"><button class="btn btn-danger" onclick="return confirm('Xác Nhận Xóa Vĩnh Viễn Danh Mục.')">RESET PASSWORD</button></a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -108,3 +108,29 @@
 </body>
 
 </html>
+
+
+
+Chưa xác nhận
+
+Đã xác nhân
+
+Chưa thanh toán
+
+Đã thanh toán
+
+Đang chuẩn bị hàng
+
+Đang giao
+
+Đã giao
+
+Đã nhận
+
+Thành công
+
+Hoàn hàng
+
+Hủy đơn
+
+

@@ -126,4 +126,36 @@ class AdminTaiKhoan
             return "Lỗi: " . $e->getMessage();
         }
     }
+    public function getTaiKhoanFormEmail($email)
+    {
+        try {
+            $sql = 'SELECT * FROM tai_khoans WHERE email = :email';
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([
+                ':email' => $email
+            ]);
+            return $stmt->fetch();
+        } catch (Exception $e) {
+            echo "Loi: " . $e->getMessage();
+        }
+    }
+    public function resetPassword($id, $mat_khau)
+    {
+        try {
+            // var_dump($id); die;
+            $sql = 'UPDATE tai_khoans
+                SET
+                mat_khau = :mat_khau
+                WHERE id= :id';
+            $stmt = $this->conn->prepare($sql);
+            // var_dump($stmt); die;
+            $stmt->execute([
+                ':mat_khau' => $mat_khau,
+                ':id' => $id
+            ]);
+            return true;
+        } catch (Exception $e) {
+            echo "loi" . $e->getMessage();
+        }
+    }
 }

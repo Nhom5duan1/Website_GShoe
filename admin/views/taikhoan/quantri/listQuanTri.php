@@ -49,7 +49,7 @@
                                             </td>
                                             <td>
                                                 <a href="<?= BASE_URL_ADMIN .  '?act=form-sua-quan-tri&id_quan_tri=' . $quanTri['id'] ?>"><button class="btn btn-warning">Sửa</button></a>
-                                                <a href="<?= BASE_URL_ADMIN .  '?act=xoa-danh-muc&id_danh_muc=' . $quanTri['id'] ?>"><button class="btn btn-danger" onclick="return confirm('Xác Nhận Xóa Vĩnh Viễn Danh Mục.')">RESET PASSWROD</button></a>
+                                                <a href="#"><button class="btn btn-danger" onclick="return confirm('Xác Nhận Xóa Vĩnh Viễn Danh Mục.')">RESET PASSWROD</button></a>
                                             </td>
                                         </tr>
                                     <?php endforeach ?>
