@@ -125,7 +125,7 @@
                         </div>
                         <div class="col-lg-4 col-12">
                             <div class="copyright">
-                                <p>Designed and Developed by<a href="https://graygrids.com/" rel="nofollow"
+                                <p>Thiết kế và phát triển bởi<a href="<?= BASE_URL?>" rel="nofollow"
                                         target="_blank">Team 5</a></p>
                             </div>
                         </div>
