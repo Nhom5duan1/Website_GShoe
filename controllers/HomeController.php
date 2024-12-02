@@ -45,28 +45,28 @@ class HomeController
     public function postLogin()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            // Lấy email và password gửi lên từ form 
             $email = $_POST['email'];
             $password = $_POST['password'];
-            // var_dump($password); die();
-            // xử lý kiểm tra thông tin đăng nhập
+
+            // Kiểm tra thông tin đăng nhập
             $user = $this->modelTaiKhoan->checkLogin($email, $password);
-            // var_dump($user);die;
-            if ($user == $email) { // trường hợp đăng nhập thành công
-                // lưu thông tin vào session 
-                $_SESSION['user-account'] = $user;
+
+            if (is_array($user) && isset($user['email'])) { // Nếu đăng nhập thành công, trả về mảng user
+                // Lưu thông tin vào session
+                $_SESSION['user-account'] = $user['email'];
+                $_SESSION['user-role'] = $user['chuc_vu_id']; // Lưu chuc_vu_id
                 header("Location:" . BASE_URL);
                 exit();
             } else {
                 // Lỗi thì lưu vào session
                 $_SESSION['e'] = $user;
-                // var_dump($_SESSION['e']);die();
-                $_SESSION['flash'] == true;
+                $_SESSION['flash'] = true;
                 header("Location:" . BASE_URL . '?act=login');
                 exit();
             }
         }
     }
+
     public function logout()
     {
         if (isset($_SESSION['user-account'])) {

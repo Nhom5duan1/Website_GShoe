@@ -14,16 +14,17 @@ class TaiKhoan
             $stmt = $this->conn->prepare($sql);
             $stmt->execute(['email' => $email]);
             $user = $stmt->fetch();
-            // So sánh mật khẩu với giá trị đã băm (hashed)            || so sánh vs mk chưa băm (hashed)
-            if ($user && password_verify($mat_khau, $user['mat_khau']) || $user['mat_khau'] === $mat_khau) {
-                if ($user['chuc_vu_id'] == 2) {
-                    if ($user['trang_thai'] == 1) { // Trường hợp đăng nhập thành công
-                        return $user['email'];
+
+            // So sánh mật khẩu với giá trị đã băm
+            if ($user && (password_verify($mat_khau, $user['mat_khau']) || $user['mat_khau'] === $mat_khau)) {
+                if ($user['chuc_vu_id'] == 1 || $user['chuc_vu_id'] == 2) {
+                    if ($user['trang_thai'] == 1) { // Thành công
+                        return $user; // Trả về toàn bộ thông tin user
                     } else {
                         return "Tài khoản bị cấm.";
                     }
                 } else {
-                    return "Tài khoản không có quyền đăng nhập admin.";
+                    return "Tài khoản không có quyền đăng nhập.";
                 }
             } else {
                 return "Thông tin email và password không đúng.";
@@ -32,6 +33,7 @@ class TaiKhoan
             return "Lỗi: " . $e->getMessage();
         }
     }
+
     public function getTaiKhoanFormEmail($email)
     {
         try {

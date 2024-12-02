@@ -105,7 +105,7 @@
                                     <div class="shopping-item">
                                         <div class="dropdown-cart-header">
                                             <span>2 Items</span>
-                                            <a href="<?= BASE_URL . '?act=cart'?>">Xem giỏ hàng</a>
+                                            <a href="<?= BASE_URL . '?act=cart' ?>">Xem giỏ hàng</a>
                                         </div>
                                         <ul class="shopping-list">
                                             <li>
@@ -141,7 +141,7 @@
                                                 <span class="total-amount">$134.00</span>
                                             </div>
                                             <div class="button">
-                                                <a href="<?= BASE_URL . '?act=thanh-toan'?>" class="btn animate">Thanh toán</a>
+                                                <a href="<?= BASE_URL . '?act=thanh-toan' ?>" class="btn animate">Thanh toán</a>
                                             </div>
                                         </div>
                                     </div>
@@ -159,24 +159,39 @@
                                     <!-- Shopping Item -->
                                     <div class="shopping-item">
                                         <?php if (isset($_SESSION['user-account'])) { ?>
-                                            <p><?= $_SESSION['user-account'];?></p>
+                                            <p class="btn btn-info"><?= $_SESSION['user-account']; ?></p>
+
+                                            <!-- Nút dành cho admin -->
+                                            <?php if (isset($_SESSION['user-role']) && $_SESSION['user-role'] == 1) { ?>
+                                                <div class="bottom">
+                                                    <div class="button">
+                                                        <a href="http://localhost/Website_GShoe/admin" class="btn animate">Quản trị</a>
+                                                    </div>
+                                                </div>
+                                            <?php } ?>
+
+                                            <!-- Nút tài khoản -->
                                             <div class="bottom">
                                                 <div class="button">
                                                     <a href="<?= BASE_URL . '?act=detail-account-khach-hang' ?>" class="btn animate">Tài khoản</a>
                                                 </div>
                                             </div>
+
+                                            <!-- Nút đăng xuất -->
                                             <div class="bottom">
                                                 <div class="button">
                                                     <a href="<?= BASE_URL . '?act=logout' ?>" class="btn animate">Đăng xuất</a>
                                                 </div>
                                             </div>
-
                                         <?php } else { ?>
+                                            <!-- Nút đăng nhập -->
                                             <div class="bottom">
                                                 <div class="button">
-                                                    <a href=" <?= BASE_URL . '?act=login' ?>" class="btn animate">Đăng nhập</a>
+                                                    <a href="<?= BASE_URL . '?act=login' ?>" class="btn animate">Đăng nhập</a>
                                                 </div>
                                             </div>
+
+                                            <!-- Nút đăng ký -->
                                             <div class="bottom">
                                                 <div class="button">
                                                     <a href="<?= BASE_URL . '?act=register' ?>" class="btn animate">Đăng ký</a>
@@ -184,6 +199,7 @@
                                             </div>
                                         <?php } ?>
                                     </div>
+
                                     <!--/ End Shopping Item -->
 
                                 </div>
