@@ -1,5 +1,4 @@
 <?php include_once './views/layout/header.php'; ?><!-- header -->
-<?php include_once './views/layout/menu.php'; ?><!-- menu -->
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">
@@ -33,7 +32,7 @@
                 <?php } else { ?>
                     <p class="login-box-msg">Đăng nhập tài khoản</p>
                 <?php } ?>
-                <form class="<?= BASE_URL . '?act=check-login' ?>" method="post">
+                <form class="" action="<?= BASE_URL . '?act=check-login' ?>" method="post">
                     <div class="card-body">
                         <div class="form-group input-group">
                             <label for="reg-fn">Email</label>

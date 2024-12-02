@@ -159,7 +159,7 @@
                                     <!-- Shopping Item -->
                                     <div class="shopping-item">
                                         <?php if (isset($_SESSION['user-account'])) { ?>
-                                            <li><a href="#"><?= $_SESSION['user-account'];?></a></li>
+                                            <p><?= $_SESSION['user-account'];?></p>
                                             <div class="bottom">
                                                 <div class="button">
                                                     <a href="<?= BASE_URL . '?act=detail-account-khach-hang' ?>" class="btn animate">Tài khoản</a>

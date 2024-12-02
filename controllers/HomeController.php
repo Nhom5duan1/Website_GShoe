@@ -34,7 +34,7 @@ class HomeController
     public function formLogin()
     {
         require_once './views/auth/login.php';
-        
+
         deleteSessionE();
     }
     public function formRegister()
@@ -51,6 +51,7 @@ class HomeController
             // var_dump($password); die();
             // xử lý kiểm tra thông tin đăng nhập
             $user = $this->modelTaiKhoan->checkLogin($email, $password);
+            // var_dump($user);die;
             if ($user == $email) { // trường hợp đăng nhập thành công
                 // lưu thông tin vào session 
                 $_SESSION['user-account'] = $user;
@@ -75,8 +76,80 @@ class HomeController
     }
     public function detailAccountKhachHang()
     {
+        $email = $_SESSION['user-account'];
+        $detailAccount = $this->modelTaiKhoan->getTaiKhoanFormEmail($email);
         require_once './views/auth/detail-account.php';
+        deleteSessionE();
     }
+    public function updateAccountKhachHang()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $id = $_SESSION['user-account'];
+
+            // Lấy dữ liệu từ form
+            $ho_ten = $_POST['ho_ten'];
+            $email = $_POST['email'];
+            $so_dien_thoai = $_POST['so_dien_thoai'];
+            $dia_chi = $_POST['dia_chi'];
+            $ngay_sinh = $_POST['ngay_sinh'];
+            $gioi_tinh = $_POST['gioi_tinh'];
+
+            $old_pass = $_POST['old_pass'] ?? null;
+            $new_pass = $_POST['new_pass'] ?? null;
+
+            $user = $this->modelTaiKhoan->getTaiKhoanFormEmail($id);
+
+            $e = [];
+            $checkPass = false;
+
+            // Kiểm tra mật khẩu nếu được nhập
+            if ($old_pass) {
+                if (password_verify($old_pass, $user['mat_khau']) || $old_pass === $user['mat_khau']) {
+                    $checkPass = true;
+                } else {
+                    $e['old_pass'] = 'Mật khẩu cũ không đúng';
+                }
+            }
+
+            // Xử lý lỗi nhập liệu
+            if (empty($ho_ten)) $e['ho_ten'] = 'Tên tài khoản không được để trống';
+            if (empty($email)) $e['email'] = 'Email không được để trống';
+            if (empty($so_dien_thoai)) $e['so_dien_thoai'] = 'Số điện thoại không được để trống';
+            if (empty($dia_chi)) $e['dia_chi'] = 'Địa chỉ không được để trống';
+            if (empty($ngay_sinh)) $e['ngay_sinh'] = 'Ngày sinh không được để trống';
+
+            // Nếu không có lỗi
+            if (empty($e)) {
+                // Nếu có mật khẩu mới, hash và cập nhật
+                if ($checkPass && $new_pass) {
+                    $hashPass = password_hash($new_pass, PASSWORD_BCRYPT);
+                    $this->modelTaiKhoan->resetPassword($user['id'], $hashPass);
+                }
+
+                // Cập nhật các thông tin khác
+                $data = [
+                    'ho_ten' => $ho_ten,
+                    'email' => $email,
+                    'so_dien_thoai' => $so_dien_thoai,
+                    'dia_chi' => $dia_chi,
+                    'ngay_sinh' => $ngay_sinh,
+                    'gioi_tinh' => $gioi_tinh,
+                ];
+                $status = $this->modelTaiKhoan->updateAccount($user['id'], $data);
+
+                if ($status) {
+                    $_SESSION['success'] = "Cập nhật thông tin thành công";
+                    header("Location:" . BASE_URL);
+                    exit();
+                }
+            } else {
+                $_SESSION['error'] = $e;
+                header("Location:" . BASE_URL . '?act=detail-account-khach-hang');
+                exit();
+            }
+        }
+    }
+
     public function listProduct()
     {
         $listSanPham = $this->modelSanPham->getAllSanPham();
@@ -84,10 +157,12 @@ class HomeController
         $SanPhamDanhMucId = $this->modelSanPham->sanPhamTheo($listDanhMuc['danh_muc_id']);
         require_once './views/listSanPham.php';
     }
-    public function cart(){
+    public function cart()
+    {
         require_once './views/cart.php';
     }
-    public function thanhToan(){
+    public function thanhToan()
+    {
         require_once './views/thanhToan.php';
     }
 }

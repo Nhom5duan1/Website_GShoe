@@ -22,6 +22,7 @@ match ($act) {
     'check-login' =>(new HomeController())->postLogin(),
     'logout' =>(new HomeController())->logout(),
     'detail-account-khach-hang' => (new HomeController())->detailAccountKhachHang(),
+    'update-taikhoan' => (new HomeController())->updateAccountKhachHang(),
     'list-product' => (new HomeController())->listProduct(),
     'cart' => (new HomeController())->cart(),
     'thanh-toan' => (new HomeController())->thanhToan(),
