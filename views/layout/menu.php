@@ -35,7 +35,7 @@
                                     <li class="nav-item"><a href="<?= BASE_URL. '?act=list-product'?>">Danh sách sản phẩm</a></li>
                                     <!-- <li class="nav-item"><a href="product-details.html">Chi tiết sản phẩm</a></li> -->
                                     <?php if (isset($_SESSION['user-account'])) { ?>
-                                    <li class="nav-item"><a href="<?= BASE_URL .'?act=cart'?>">Cart</a></li>
+                                    <li class="nav-item"><a href="<?= BASE_URL . '?act=gio-hang' ?>">Xem giỏ hàng</a>
                                     <!-- <li class="nav-item"><a href="checkout.html">Checkout(thanh toán)</a></li> -->
                                     <?php } ?>
                                 </ul>
