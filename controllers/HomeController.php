@@ -4,10 +4,12 @@ class HomeController
 {
     public $modelSanPham;
     public $modelTaiKhoan;
+    public $modelGioHang;
     public function __construct()
     {
         $this->modelSanPham = new SanPham();
         $this->modelTaiKhoan = new TaiKhoan();
+        $this->modelGioHang = new GioHang();
     }
     public function home()
     {
@@ -159,10 +161,81 @@ class HomeController
     }
     public function cart()
     {
+        if (isset($_SESSION['user-account'])) {
+            $email = $this->modelTaiKhoan->getTaiKhoanFormEmail($_SESSION['user-account']);
+
+            $gioHang = $this->modelGioHang->getGioHangFormUser($email['id']);
+            if (!$gioHang) {
+                $gioHangId = $this->modelGioHang->addGiohang($email['id']);
+                $gioHang = ['id' => $gioHangId];
+                $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+            } else {
+                $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+            }
+            // var_dump($chiTietGioHang);die;
+            require_once './views/cart.php';
+        } else {
+            var_dump('Loi chua dang nhap');
+            die;
+        }
         require_once './views/cart.php';
     }
     public function thanhToan()
     {
-        require_once './views/thanhToan.php';
+        if (isset($_SESSION['user-account'])) {
+            $user = $this->modelTaiKhoan->getTaiKhoanFormEmail($_SESSION['user-account']);
+
+            $gioHang = $this->modelGioHang->getGioHangFormUser($user['id']);
+            if (!$gioHang) {
+                $gioHangId = $this->modelGioHang->addGiohang($user['id']);
+                $gioHang = ['id' => $gioHangId];
+                $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+            } else {
+                $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+            }
+            // var_dump($chiTietGioHang);die;
+            require_once './views/thanhToan.php';
+        } else {
+            var_dump('Loi chua dang nhap');die;
+        }
+    }
+    public function addGiohang()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if (isset($_SESSION['user-account'])) {
+                $email = $this->modelTaiKhoan->getTaiKhoanFormEmail($_SESSION['user-account']);
+
+                $gioHang = $this->modelGioHang->getGioHangFormUser($email['id']);
+                if (!$gioHang) {
+                    $gioHangId = $this->modelGioHang->addGiohang($email['id']);
+                    $gioHang = ['id' => $gioHangId];
+                    $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                } else {
+                    $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+                }
+                // var_dump($chiTietGioHang);die;
+                $san_pham_id = $_POST['san_pham_id'];
+                $so_luong = $_POST['so_luong'];
+
+                $checkSanPham = false;
+                foreach ($chiTietGioHang as $detail) {
+                    if ($detail['san_pham_id'] == $san_pham_id) {
+                        $newSoLuong = $detail['so_luong'] + $so_luong;
+                        $this->modelGioHang->updateSoLuong($gioHang['id'], $san_pham_id, $newSoLuong);
+                        $checkSanPham = true;
+                        break;
+                    }
+                }
+                if (!$checkSanPham) {
+                    $this->modelGioHang->addDetailGioHang($gioHang['id'], $san_pham_id, $so_luong); // Fixed here
+                }
+                // var_dump('thanh cong');
+                header("Location:" . BASE_URL . '?act=gio-hang');
+                die;
+            } else {
+                var_dump('Loi chua dang nhap');
+                die;
+            }
+        }
     }
 }

@@ -46,7 +46,8 @@
                         <p class="category"><i class="lni lni-tag"></i> Danh mục:<a href="javascript:void(0)"><?= $sanPham['ten_danh_muc'] ?></a></p>
                         <h3 class="price"><?= formatPrice($sanPham['gia_san_pham']) . 'đ' ?><span><?= formatPrice($sanPham['gia_khuyen_mai']) . 'đ' ?></span></h3>
                         <p class="info-text"><?= $sanPham['mo_ta'] ?></p>
-                        <!-- <div class="row">
+                        <form action="<?= BASE_URL . '?act=them-gio-hang' ?>" method="POST">
+                            <div class="row">
                                 <div class="col-lg-4 col-md-4 col-12">
                                     <div class="form-group color-option">
                                         <label class="title-label" for="size">Choose color</label>
@@ -80,8 +81,9 @@
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-12">
                                     <div class="form-group quantity">
-                                        <label for="color">Quantity</label>
-                                        <select class="form-control">
+                                        <label for="color">Số lượng</label>
+                                        <input type="hidden" name="san_pham_id" value="<?= $sanPham['id']?>">
+                                        <select class="form-control" name="so_luong" id="so_luong">
                                             <option>1</option>
                                             <option>2</option>
                                             <option>3</option>
@@ -90,26 +92,28 @@
                                         </select>
                                     </div>
                                 </div>
-                            </div> -->
-                        <div class="bottom-content">
-                            <div class="row align-items-end">
-                                <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="button cart-button">
-                                        <button class="btn" style="width: 100%;">Add to Cart</button>
+                            </div>
+
+                            <div class="bottom-content">
+                                <div class="row align-items-end">
+                                    <div class="col-lg-4 col-md-4 col-12">
+                                        <div class="button cart-button">
+                                            <button class="btn" type="submit" style="width: 100%;">Add to Cart</button>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="wish-button">
-                                        <button class="btn"><i class="lni lni-reload"></i> Compare</button>
+                                    <div class="col-lg-4 col-md-4 col-12">
+                                        <div class="wish-button">
+                                            <button class="btn"><i class="lni lni-reload"></i> Compare</button>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="wish-button">
-                                        <button class="btn"><i class="lni lni-heart"></i> To Wishlist</button>
+                                    <div class="col-lg-4 col-md-4 col-12">
+                                        <div class="wish-button">
+                                            <button class="btn"><i class="lni lni-heart"></i> To Wishlist</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>

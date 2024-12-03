@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 24, 2024 at 08:17 AM
+-- Generation Time: Dec 03, 2024 at 07:27 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.3.14
 
@@ -63,8 +63,8 @@ CREATE TABLE `chi_tiet_don_hangs` (
 --
 
 INSERT INTO `chi_tiet_don_hangs` (`id`, `don_hang_id`, `san_pham_id`, `don_gia`, `so_luong`, `thanh_tien`) VALUES
-(1, 1, 2, '9000000.00', 12, '9000000.00'),
-(2, 2, 2, '10000000.00', 1, '10000000.00');
+(1, 1, 13, '9000000.00', 12, '9000000.00'),
+(2, 2, 14, '10000000.00', 1, '10000000.00');
 
 -- --------------------------------------------------------
 
@@ -78,6 +78,14 @@ CREATE TABLE `chi_tiet_gio_hangs` (
   `san_pham_id` int NOT NULL,
   `so_luong` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `chi_tiet_gio_hangs`
+--
+
+INSERT INTO `chi_tiet_gio_hangs` (`id`, `gio_hang_id`, `san_pham_id`, `so_luong`) VALUES
+(3, 2, 13, 12),
+(4, 2, 15, 5);
 
 -- --------------------------------------------------------
 
@@ -149,7 +157,7 @@ CREATE TABLE `don_hangs` (
 --
 
 INSERT INTO `don_hangs` (`id`, `ma_don_hang`, `tai_khoan_id`, `ten_nguoi_nhan`, `email_nguoi_nhan`, `sdt_nguoi_nhan`, `dia_chi_nguoi_nhan`, `ngay_dat`, `tong_tien`, `ghi_chu`, `phuong_thuc_thanh_toan_id`, `trang_thai_id`) VALUES
-(1, 'DH-1', 5, 'Nguyễn Văn A', 'Nguyenvana@gmail.com', '0987654321', '13 Trịnh Văn Bô, Hà Nội', '2024-08-01', '9000000.00', 'Chú ý hàng dễ ', 1, 2),
+(1, 'DH-1', 5, 'Nguyễn Văn A', 'Nguyenvana@gmail.com', '0987654320', '13 Trịnh Văn Bô, Hà Nội', '2024-08-01', '9000000.00', 'Chú ý đóng gói cẩn thận', 1, 10),
 (2, 'DH-2', 7, 'Dương Thị Mai', 'Duongthimai@gmail.com', '0123456789', 'Nam Từ Liêm, Hà Nội', '2024-08-02', '10000000.00', 'Chú ý hàng là cần bảo quản ', 1, 9);
 
 -- --------------------------------------------------------
@@ -162,6 +170,13 @@ CREATE TABLE `gio_hangs` (
   `id` int NOT NULL,
   `tai_khoan_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `gio_hangs`
+--
+
+INSERT INTO `gio_hangs` (`id`, `tai_khoan_id`) VALUES
+(2, 5);
 
 -- --------------------------------------------------------
 
@@ -282,10 +297,10 @@ CREATE TABLE `san_phams` (
 --
 
 INSERT INTO `san_phams` (`id`, `ten_san_pham`, `gia_san_pham`, `gia_khuyen_mai`, `hinh_anh`, `so_luong`, `luot_xem`, `ngay_nhap`, `mo_ta`, `danh_muc_id`, `trang_thai`) VALUES
-(13, 'Giày thể thao Nike Air Force 1', '2929000.00', '3000000.00', './uploads/1731136508AIR+FORCE+1+\'07.png', 10, 0, '2024-11-01', 'Nike Air Force 1 \'07 Men\'s Shoes', 1, 1),
-(14, 'Giày thể thao Nike Air Force 1', '2809000.00', '3000000.00', './uploads/1731136900tải xuống (2).jpg', 10, 0, '2024-11-02', 'Air Jordan 1 Low SE Older Kids\' Shoes', 1, 1),
-(15, 'Giày Sneaker Nam Adidas Grand ', '1400000.00', '2000000.00', './uploads/1731137723GW9195-1.webp', 9, 0, '2024-11-01', 'Giày Sneaker Nam Adidas Grand Court Cloudfoam Comfort - Trắng', 2, 1),
-(16, 'Giày Thể Thao Adidas Samba Adv Shoes GZ8477 IE3975', '3550000.00', '4200000.00', './uploads/1731138124giay-the-thao-adidas-samba-adv-shoes-gz8477-mau-trang-xam-655b0abfc6757-20112023142903.webp', 5, 0, '2024-11-03', 'Giày Thể Thao Adidas Samba Adv Shoes GZ8477 IE3975 Màu Trắng Xám Size 36.5', 2, 1);
+(13, 'Giày thể thao Nike Air Force 1', '3000000.00', '2929000.00', './uploads/1731136508AIR+FORCE+1+\'07.png', 10, 0, '2024-11-01', 'Nike Air Force 1 \'07 Men\'s Shoes', 1, 1),
+(14, 'Giày thể thao Nike Air Force 1', '3000000.00', '2809000.00', './uploads/1731136900tải xuống (2).jpg', 10, 0, '2024-11-02', 'Air Jordan 1 Low SE Older Kids\' Shoes', 1, 1),
+(15, 'Giày Sneaker Nam Adidas Grand ', '3000000.00', '1400000.00', './uploads/1731137723GW9195-1.webp', 9, 0, '2024-11-01', 'Giày Sneaker Nam Adidas Grand Court Cloudfoam Comfort - Trắng', 2, 1),
+(16, 'Giày Thể Thao Adidas Samba Adv Shoes GZ8477 IE3975', '3000000.00', '3550000.00', './uploads/1731138124giay-the-thao-adidas-samba-adv-shoes-gz8477-mau-trang-xam-655b0abfc6757-20112023142903.webp', 5, 0, '2024-11-03', 'Giày Thể Thao Adidas Samba Adv Shoes GZ8477 IE3975 Màu Trắng Xám Size 36.5', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -312,10 +327,10 @@ CREATE TABLE `tai_khoans` (
 --
 
 INSERT INTO `tai_khoans` (`id`, `ho_ten`, `anh_dai_dien`, `ngay_sinh`, `email`, `so_dien_thoai`, `gioi_tinh`, `dia_chi`, `mat_khau`, `chuc_vu_id`, `trang_thai`) VALUES
-(4, 'admin', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645-t.jpg', NULL, 'admin@fpt.edu.vn', '0987654321', 1, NULL, '123456', 1, 1),
-(5, 'Nguyễn Văn A', 'https://photo.znews.vn/w660/Uploaded/mdf_eioxrd/2021_07_06/2.jpg', '2024-09-01', 'nguyenvana@gmail.com', '0123456789', 1, 'Số 1 Ba Đình ', '$2y$10$eWR2UeWYgsDppvSiGVjMAuk0xlNuGlj8hLL6wCg3PSsOF6BeiSmAG', 2, 1),
-(7, 'Nguyễn Thị B', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN0Y_SeJHZINmA_vwcN_rR71JW9wJXegQWiA&s', NULL, 'nguyenthib@gmail.com', '0123443210', 2, 'Hà Nội', '$2y$10$WegmWQsuO7nM/tHqrsvoY.tx6gRNQiV1WRSCED3NhGWRlFrFOVVFa', 2, 2),
-(8, 'Admin2', 'https://d1hjkbq40fs2x4.cloudfront.net/2016-01-31/files/1045.jpg', NULL, 'admin2@gmail.com', '0999256387', 1, NULL, '123', 2, 1);
+(4, 'admin', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645-t.jpg', '2024-09-01', 'admin@fpt.edu.vn', '0987654321', 1, '123', '$2y$10$tEd7lok7wI5jE0jB0348i.RP5PLn6R5n4U/c/cYXxMLEDxloCcNn6', 1, 1),
+(5, 'Nguyễn Văn A', 'https://photo.znews.vn/w660/Uploaded/mdf_eioxrd/2021_07_06/2.jpg', '2024-09-01', 'nguyenvana@gmail.com', '0123456789', 1, 'Số 1 Ba Đình ', '$2y$10$4X5RXO8Psn19lHrrjscshOwFi4ZJhp4OFH6ca.78BybcwGViOnb2u', 2, 1),
+(7, 'Nguyễn Thị B', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN0Y_SeJHZINmA_vwcN_rR71JW9wJXegQWiA&s', '2024-09-01', 'nguyenthib@gmail.com', '0123443210', 2, 'Hà Nội', '$2y$10$WegmWQsuO7nM/tHqrsvoY.tx6gRNQiV1WRSCED3NhGWRlFrFOVVFa', 2, 2),
+(8, 'Admin 2', 'https://d1hjkbq40fs2x4.cloudfront.net/2016-01-31/files/1045.jpg', '2024-09-08', 'admin2@gmail.com', '0999256388', 1, 'admin2@gmail.com', '$2y$10$FiMyrOM9YG3x5dIKgdADMe5dtGBkGQ8G22NaTjnSvsRH0.uBUy0Bi', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -334,11 +349,11 @@ CREATE TABLE `trang_thai_don_hangs` (
 
 INSERT INTO `trang_thai_don_hangs` (`id`, `ten_trang_thai`) VALUES
 (1, 'Chưa xác nhận'),
-(2, 'Chưa thanh toán'),
-(3, 'Đang chuẩn bị hàng'),
-(4, 'Đang giao'),
-(5, 'Đã xác nhận'),
-(6, 'Đã thanh toán'),
+(2, 'Đã xác nhận'),
+(3, 'Chưa thanh toán'),
+(4, 'Đã thanh toán'),
+(5, 'Đang chuẩn bị hàng'),
+(6, 'Đang giao'),
 (7, 'Đã giao'),
 (8, 'Đã nhận'),
 (9, 'Thành công'),
@@ -442,7 +457,7 @@ ALTER TABLE `chi_tiet_don_hangs`
 -- AUTO_INCREMENT for table `chi_tiet_gio_hangs`
 --
 ALTER TABLE `chi_tiet_gio_hangs`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `chuc_vus`
@@ -466,7 +481,7 @@ ALTER TABLE `don_hangs`
 -- AUTO_INCREMENT for table `gio_hangs`
 --
 ALTER TABLE `gio_hangs`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `hinh_anh_san_phams`
@@ -496,7 +511,7 @@ ALTER TABLE `tai_khoans`
 -- AUTO_INCREMENT for table `trang_thai_don_hangs`
 --
 ALTER TABLE `trang_thai_don_hangs`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

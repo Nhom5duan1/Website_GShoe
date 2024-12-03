@@ -15,7 +15,7 @@
                     <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                         <ul id="nav" class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a href="<?= BASE_URL?>" class="active" aria-label="Toggle navigation">Home</a>
+                                <a href="<?= BASE_URL ?>" class="active" aria-label="Toggle navigation">Home</a>
                             </li>
                             <li class="nav-item"><a class="dd-menu collapsed" href="javascript:void(0)"
                                     data-bs-toggle="collapse" data-bs-target="#submenu-1-2"
@@ -32,12 +32,12 @@
                                     aria-controls="navbarSupportedContent" aria-expanded="false"
                                     aria-label="Toggle navigation">Sản phẩm</a>
                                 <ul class="sub-menu collapse" id="submenu-1-3">
-                                    <li class="nav-item"><a href="product-grids.html">Danh sách sản phẩm</a>
-                                    </li>
-                                    <li class="nav-item"><a href="product-details.html">Chi tiết sản phẩm</a>
-                                    </li>
-                                    <li class="nav-item"><a href="cart.html">Cart</a></li>
-                                    <li class="nav-item"><a href="checkout.html">Checkout(thanh toán)</a></li>
+                                    <li class="nav-item"><a href="<?= BASE_URL. '?act=list-product'?>">Danh sách sản phẩm</a></li>
+                                    <!-- <li class="nav-item"><a href="product-details.html">Chi tiết sản phẩm</a></li> -->
+                                    <?php if (isset($_SESSION['user-account'])) { ?>
+                                    <li class="nav-item"><a href="<?= BASE_URL .'?act=cart'?>">Cart</a></li>
+                                    <!-- <li class="nav-item"><a href="checkout.html">Checkout(thanh toán)</a></li> -->
+                                    <?php } ?>
                                 </ul>
                             </li>
                         </ul>

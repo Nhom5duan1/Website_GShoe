@@ -89,37 +89,43 @@
         </div>
         <div class="row">
             <?php foreach ($listSanPham as $key => $sanPham): ?>
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Product -->
-                <div class="single-product">
-                    <div class="product-image">
-                        <img style="width: 288px; height: 286.40px; " src="<?= BASE_URL . $sanPham['hinh_anh']; ?>" alt="#">
-                        <div class="button">
-                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Product -->
+                    <div class="single-product">
+                        <div class="product-image">
+                            <img style="width: 288px; height: 286.40px; " src="<?= BASE_URL . $sanPham['hinh_anh']; ?>" alt="#">
+                            <div class="button">
+                                <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category"><?= $sanPham['ten_danh_muc'] ?></span>
+                            <h4 class="title">
+                                <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>"><?= $sanPham['ten_san_pham'] ?></a>
+                            </h4>
+                            <ul class="review">
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star"></i></li>
+                                <li><span>4.0 Review(s)</span></li>
+                            </ul>
+                            <div class="price">
+                                <?php if ($sanPham['gia_khuyen_mai']) { ?>
+                                    <p><?= formatPrice($sanPham['gia_san_pham']) . ' đ' ?></p>
+                                    <span><?= formatPrice($sanPham['gia_khuyen_mai']) . 'đ' ?></span>
+                                <?php } else { ?>
+                                    <span><?= formatPrice($sanPham['gia_san_pham']) . 'đ' ?></span>
+                                <?php } ?>
+                                
+                            </div>
                         </div>
                     </div>
-                    <div class="product-info">
-                        <span class="category"><?= $sanPham['ten_danh_muc']?></span>
-                        <h4 class="title">
-                            <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>"><?= $sanPham['ten_san_pham'] ?></a>
-                        </h4>
-                        <ul class="review">
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star"></i></li>
-                            <li><span>4.0 Review(s)</span></li>
-                        </ul>
-                        <div class="price">
-                            <span><?= formatPrice($sanPham['gia_san_pham']) . 'đ' ?></span>
-                        </div>
-                    </div>
+                    <!-- End Single Product -->
                 </div>
-                <!-- End Single Product -->
-            </div>
-            <?php endforeach?>
-            
+            <?php endforeach ?>
+
         </div>
     </div>
 </section>
@@ -270,11 +276,11 @@
         </div>
         <div class="brands-logo-wrapper">
             <div class="brands-logo-carousel d-flex align-items-center justify-content-between">
-                <?php foreach($listDanhMuc as $anhDanhMuc):?>
-                <div class="brand-logo">
-                    <img src="<?= $anhDanhMuc['anh']?>" alt="#">
-                </div>
-                <?php endforeach?>
+                <?php foreach ($listDanhMuc as $anhDanhMuc): ?>
+                    <div class="brand-logo">
+                        <img src="<?= $anhDanhMuc['anh'] ?>" alt="#">
+                    </div>
+                <?php endforeach ?>
             </div>
         </div>
     </div>
