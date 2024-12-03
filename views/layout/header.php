@@ -94,6 +94,7 @@
                                     </a>
                                 </div>
                                 <!-- End sản phẩm yêu thích -->
+<<<<<<< HEAD
                                 <?php if (isset($_SESSION['user-account'])) { ?>
                                     <!-- Phần giỏ hàng -->
                                     <div class="cart-items">
@@ -106,6 +107,53 @@
                                             <div class="dropdown-cart-header">
                                                 <span>2 Items</span>
                                                 <a href="<?= BASE_URL . '?act=gio-hang' ?>">Xem giỏ hàng</a>
+=======
+
+                                <!-- Phần giỏ hàng -->
+                                <div class="cart-items">
+                                    <a href="javascript:void(0)" class="main-btn">
+                                        <i class="lni lni-cart"></i>
+                                        <span class="total-items">2</span>
+                                    </a>
+                                    <!-- Shopping Item -->
+                                    <div class="shopping-item">
+                                        <div class="dropdown-cart-header">
+                                            <span>2 Items</span>
+                                            <a href="<?= BASE_URL . '?act=cart' ?>">Xem giỏ hàng</a>
+                                        </div>
+                                        <ul class="shopping-list">
+                                            <li>
+                                                <a href="javascript:void(0)" class="remove" title="Remove this item"><i
+                                                        class="lni lni-close"></i></a>
+                                                <div class="cart-img-head">
+                                                    <a class="cart-img" href="product-details.html"><img
+                                                            src="assets/images/header/cart-items/Giay-Air-Jordan-1-Low-Triple-White-553558-130.jpg.webp" alt="#"></a>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h4><a href="product-details.html">
+                                                    Nike Air Jordan 1 Low Triple</a></h4>
+                                                    <p class="quantity">1x - <span class="amount">2.990.000đ</span></p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" class="remove" title="Remove this item"><i
+                                                        class="lni lni-close"></i></a>
+                                                <div class="cart-img-head">
+                                                    <a class="cart-img" href="product-details.html"><img
+                                                            src="assets/images/header/cart-items/adidas-samba.webp" alt="#"></a>
+                                                </div>
+                                                <div class="content">
+                                                    <h4><a href="product-details.html">Giày Thể Thao Adidas Samba</a></h4>
+                                                    <p class="quantity">1x - <span class="amount">3.290.000đ</span></p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="bottom">
+                                            <div class="total">
+                                                <span>Total</span>
+                                                <span class="total-amount">6.280.000đ</span>
+>>>>>>> f7489c2e6113e012567ae8bfb4c0202e381261e4
                                             </div>
                                             <ul class="shopping-list">
                                                 <li>
