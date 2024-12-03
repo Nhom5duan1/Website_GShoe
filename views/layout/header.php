@@ -94,9 +94,9 @@
                                     </a>
                                 </div>
                                 <!-- End sản phẩm yêu thích -->
-<<<<<<< HEAD
+
+                                <!-- Phần giỏ hàng -->
                                 <?php if (isset($_SESSION['user-account'])) { ?>
-                                    <!-- Phần giỏ hàng -->
                                     <div class="cart-items">
                                         <a href="javascript:void(0)" class="main-btn">
                                             <i class="lni lni-cart"></i>
@@ -106,54 +106,7 @@
                                         <div class="shopping-item">
                                             <div class="dropdown-cart-header">
                                                 <span>2 Items</span>
-                                                <a href="<?= BASE_URL . '?act=gio-hang' ?>">Xem giỏ hàng</a>
-=======
-
-                                <!-- Phần giỏ hàng -->
-                                <div class="cart-items">
-                                    <a href="javascript:void(0)" class="main-btn">
-                                        <i class="lni lni-cart"></i>
-                                        <span class="total-items">2</span>
-                                    </a>
-                                    <!-- Shopping Item -->
-                                    <div class="shopping-item">
-                                        <div class="dropdown-cart-header">
-                                            <span>2 Items</span>
-                                            <a href="<?= BASE_URL . '?act=cart' ?>">Xem giỏ hàng</a>
-                                        </div>
-                                        <ul class="shopping-list">
-                                            <li>
-                                                <a href="javascript:void(0)" class="remove" title="Remove this item"><i
-                                                        class="lni lni-close"></i></a>
-                                                <div class="cart-img-head">
-                                                    <a class="cart-img" href="product-details.html"><img
-                                                            src="assets/images/header/cart-items/Giay-Air-Jordan-1-Low-Triple-White-553558-130.jpg.webp" alt="#"></a>
-                                                </div>
-
-                                                <div class="content">
-                                                    <h4><a href="product-details.html">
-                                                    Nike Air Jordan 1 Low Triple</a></h4>
-                                                    <p class="quantity">1x - <span class="amount">2.990.000đ</span></p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)" class="remove" title="Remove this item"><i
-                                                        class="lni lni-close"></i></a>
-                                                <div class="cart-img-head">
-                                                    <a class="cart-img" href="product-details.html"><img
-                                                            src="assets/images/header/cart-items/adidas-samba.webp" alt="#"></a>
-                                                </div>
-                                                <div class="content">
-                                                    <h4><a href="product-details.html">Giày Thể Thao Adidas Samba</a></h4>
-                                                    <p class="quantity">1x - <span class="amount">3.290.000đ</span></p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="bottom">
-                                            <div class="total">
-                                                <span>Total</span>
-                                                <span class="total-amount">6.280.000đ</span>
->>>>>>> f7489c2e6113e012567ae8bfb4c0202e381261e4
+                                                <a href="cart.html">View Cart</a>
                                             </div>
                                             <ul class="shopping-list">
                                                 <li>
@@ -170,6 +123,18 @@
                                                         <p class="quantity">1x - <span class="amount">$99.00</span></p>
                                                     </div>
                                                 </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="remove" title="Remove this item"><i
+                                                            class="lni lni-close"></i></a>
+                                                    <div class="cart-img-head">
+                                                        <a class="cart-img" href="product-details.html"><img
+                                                                src="assets/images/header/cart-items/item2.jpg" alt="#"></a>
+                                                    </div>
+                                                    <div class="content">
+                                                        <h4><a href="product-details.html">Wi-Fi Smart Camera</a></h4>
+                                                        <p class="quantity">1x - <span class="amount">$35.00</span></p>
+                                                    </div>
+                                                </li>
                                             </ul>
                                             <div class="bottom">
                                                 <div class="total">
@@ -177,14 +142,16 @@
                                                     <span class="total-amount">$134.00</span>
                                                 </div>
                                                 <div class="button">
-                                                    <a href="<?= BASE_URL . '?act=thanh-toan' ?>" class="btn animate">Thanh toán</a>
+                                                    <a href="checkout.html" class="btn animate">Checkout</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <!--/ End Shopping Item -->
+
                                     </div>
-                                    <!-- End Phần giỏ hàng -->
                                 <?php } ?>
+                                <!-- End Phần giỏ hàng -->
+
                                 <!-- Phần tài khoản  -->
                                 <div class="cart-items">
                                     <a href="javascript:void(0)" class="main-btn">
@@ -194,7 +161,9 @@
                                     <!-- Shopping Item -->
                                     <div class="shopping-item">
                                         <?php if (isset($_SESSION['user-account'])) { ?>
-                                            <p class="btn btn-info"><?= $_SESSION['user-account']; ?></p>
+                                            <p class="btn btn-info">
+                                                <?= $_SESSION['user-account']; ?>
+                                            </p>
 
                                             <!-- Nút dành cho admin -->
                                             <?php if (isset($_SESSION['user-role']) && $_SESSION['user-role'] == 1) { ?>
@@ -208,7 +177,8 @@
                                             <!-- Nút tài khoản -->
                                             <div class="bottom">
                                                 <div class="button">
-                                                    <a href="<?= BASE_URL . '?act=detail-account-khach-hang' ?>" class="btn animate">Tài khoản</a>
+                                                    <a href="<?= BASE_URL . '?act=detail-account-khach-hang' ?>" class="btn animate">Tài
+                                                        khoản</a>
                                                 </div>
                                             </div>
 
@@ -243,7 +213,6 @@
                         </div>
                     </div>
                     <!--  End Phần yêu thích, giỏ hàng, tài khoản -->
+
                 </div>
-            </div>
-        </div>
-        <!-- End Phần Header  -->
+                <!-- End Phần Header  -->
