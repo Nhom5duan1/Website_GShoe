@@ -15,6 +15,23 @@ class HomeController
     {
         $listSanPham = $this->modelSanPham->getAllSanPham();
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
+        if (isset($_SESSION['user-account'])) {
+            $email = $this->modelTaiKhoan->getTaiKhoanFormEmail($_SESSION['user-account']);
+
+            $gioHang = $this->modelGioHang->getGioHangFormUser($email['id']);
+            if (!$gioHang) {
+                $gioHangId = $this->modelGioHang->addGiohang($email['id']);
+                $gioHang = ['id' => $gioHangId];
+                $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+            } else {
+                $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+            }
+            // var_dump($chiTietGioHang);die;
+            // require_once './views/cart.php';
+        } else {
+            var_dump('Loi chua dang nhap');
+            die;
+        }
         require_once './views/home.php';
     }
     public function chiTietSanPham()
@@ -196,7 +213,8 @@ class HomeController
             // var_dump($chiTietGioHang);die;
             require_once './views/thanhToan.php';
         } else {
-            var_dump('Loi chua dang nhap');die;
+            var_dump('Loi chua dang nhap');
+            die;
         }
     }
     public function addGiohang()

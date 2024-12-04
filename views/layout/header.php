@@ -96,6 +96,7 @@
                                 <!-- End sản phẩm yêu thích -->
 
                                 <!-- Phần giỏ hàng -->
+                                <?php $tongGioHang = 0; ?>
                                 <?php if (isset($_SESSION['user-account'])) { ?>
                                     <div class="cart-items">
                                         <a href="javascript:void(0)" class="main-btn">
@@ -105,41 +106,47 @@
                                         <!-- Shopping Item -->
                                         <div class="shopping-item">
                                             <div class="dropdown-cart-header">
-                                                <span>2 Items</span>
+                                                <span>
+                                                    <!-- Số lượng sản phẩm ở giỏ hàng -->
+                                                </span>
                                                 <a href="<?= BASE_URL . '?act=gio-hang' ?>">Xem giỏ hàng</a>
                                             </div>
                                             <ul class="shopping-list">
-                                                <li>
-                                                    <a href="javascript:void(0)" class="remove" title="Remove this item"><i
-                                                            class="lni lni-close"></i></a>
-                                                    <div class="cart-img-head">
-                                                        <a class="cart-img" href="product-details.html"><img
-                                                                src="assets/images/header/cart-items/item1.jpg" alt="#"></a>
-                                                    </div>
+                                                <?php foreach ($chiTietGioHang as $sanPham): ?>
+                                                    <li>
+                                                        <a href="javascript:void(0)" class="remove" title="Remove this item"><i
+                                                                class="lni lni-close"></i></a>
+                                                        <div class="cart-img-head">
+                                                            <a class="cart-img" href="product-details.html"><img
+                                                                    src="<?= BASE_URL . $sanPham['hinh_anh'] ?>" alt="#"></a>
+                                                        </div>
 
-                                                    <div class="content">
-                                                        <h4><a href="product-details.html">
-                                                                Apple Watch Series 6</a></h4>
-                                                        <p class="quantity">1x - <span class="amount">$99.00</span></p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="remove" title="Remove this item"><i
-                                                            class="lni lni-close"></i></a>
-                                                    <div class="cart-img-head">
-                                                        <a class="cart-img" href="product-details.html"><img
-                                                                src="assets/images/header/cart-items/item2.jpg" alt="#"></a>
-                                                    </div>
-                                                    <div class="content">
-                                                        <h4><a href="product-details.html">Wi-Fi Smart Camera</a></h4>
-                                                        <p class="quantity">1x - <span class="amount">$35.00</span></p>
-                                                    </div>
-                                                </li>
+                                                        <div class="content">
+                                                            <h4><a href="#">
+                                                                    <?= $sanPham['ten_san_pham'] ?></a></h4>
+                                                            <p class="quantity"><?= 'SL: ' . $sanPham['so_luong'] ?> - <span class="amount">
+                                                                    <?php if ($sanPham['gia_khuyen_mai']) { ?>
+                                                                        <?= formatPrice($sanPham['gia_khuyen_mai']) . ' VND' ?>
+                                                                    <?php } else { ?>
+                                                                        <?= formatPrice($sanPham['gia_san_pham']) . ' VND' ?>
+                                                                    <?php } ?>
+                                                                </span></p>
+                                                        </div>
+                                                    </li><?php
+                                                    $tongTien = 0;
+                                                    if ($sanPham['gia_khuyen_mai']) {
+                                                        $tongTien = $sanPham['gia_khuyen_mai'] * $sanPham['so_luong'];
+                                                    } else {
+                                                        $tongTien = $sanPham['gia_san_pham'] * $sanPham['so_luong'];
+                                                    }
+                                                    $tongGioHang += $tongTien;?>
+                                                <?php endforeach ?>
                                             </ul>
                                             <div class="bottom">
                                                 <div class="total">
-                                                    <span>Total</span>
-                                                    <span class="total-amount">$134.00</span>
+
+                                                    <span>Giá tiền </span>
+                                                    <span class="total-amount"><?= formatPrice($tongGioHang) . ' VND' ?></span>
                                                 </div>
                                                 <div class="button">
                                                     <a href="<?= BASE_URL . '?act=thanh-toan' ?>" class="btn animate">Thanh toán</a>
