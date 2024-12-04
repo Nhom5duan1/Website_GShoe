@@ -29,7 +29,7 @@
             <div class="col-lg-8">
                 <div class="checkout-steps-form-style-1">
                     <ul id="accordionExample">
-                        <form action="<?= BASE_URL.'?act=datHang'?>" method="post">
+                        <form action="<?= BASE_URL . '?act=datHang' ?>" method="post">
                             <li>
                                 <h6 class="title" data-bs-toggle="collapse" data-bs-target="#collapseThree"
                                     aria-expanded="true" aria-controls="collapseThree">
