@@ -26,11 +26,8 @@ class HomeController
             } else {
                 $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
             }
-            // var_dump($chiTietGioHang);die;
-            // require_once './views/cart.php';
         } else {
-            var_dump('Loi chua dang nhap');
-            die;
+            require_once './views/home.php';
         }
         require_once './views/home.php';
     }
@@ -42,7 +39,6 @@ class HomeController
         $listAnhSanPham = $this->modelSanPham->getListAnhSanPham($id);
         $listBinhLuan = $this->modelSanPham->getBinhLuanFromSanPham($id);
         $listSanPhamDanhMucId = $this->modelSanPham->sanPhamTheoDanhMuc($sanPham['danh_muc_id']);
-        // var_dump($listSanPhamDanhMucId);die();
         if ($sanPham) {
             require_once './views/detailSanPham.php';
         } else {
