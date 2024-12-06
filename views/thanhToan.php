@@ -29,14 +29,13 @@
             <div class="col-lg-8">
                 <div class="checkout-steps-form-style-1">
                     <ul id="accordionExample">
-                        <form action="<?= BASE_URL . '?act=datHang' ?>" method="post">
+                        <form action="<?= BASE_URL . '?act=xu-ly-thanh-toan' ?>" method="post">
                             <li>
-                                <h6 class="title" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                    aria-expanded="true" aria-controls="collapseThree">
+                                <input type="hidden" name="tong_tien" value="<?= $tongGioHang + 30000?>">
+                                <h6 class="title" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                                     <Td>Thông tin người nhận</Td>
                                 </h6>
-                                <section class="checkout-steps-form-content collapse show" id="collapseThree"
-                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <section class="checkout-steps-form-content collapse show" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="single-form form-default">
@@ -80,13 +79,25 @@
                                                 </div>
                                             </div>
                                         </div>
-
+                                        <div class="col-md-12">
+                                            <div class="single-checkbox checkbox-style-3">
+                                                <input type="checkbox" id="checkbox-3" name="phuong_thuc_thanh_toan_id" value="1" onchange="handleCheckboxToggle('checkbox-3', 'checkbox-4')">
+                                                <label for="checkbox-3"><span></span></label>
+                                                <p>Thanh toán khi nhận hàng</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="single-checkbox checkbox-style-3">
+                                                <input type="checkbox" id="checkbox-4" name="phuong_thuc_thanh_toan_id" value="2" onchange="handleCheckboxToggle('checkbox-4', 'checkbox-3'); togglePaymentSection()">
+                                                <label for="checkbox-4"><span></span></label>
+                                                <p>Thanh toán online</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </section>
                             </li>
-                            <li>
-                                <h6 class="title collapsed" data-bs-toggle="collapse" data-bs-target="#collapsefive"
-                                    aria-expanded="false" aria-controls="collapsefive">Thông tin thanh toán</h6>
+                            <li id="online-payment-section" style="display: none;">
+                                <h6 class="title collapsed" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">Thanh thanh toán online</h6>
                                 <section class="checkout-steps-form-content collapse" id="collapsefive"
                                     aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                                     <div class="row">

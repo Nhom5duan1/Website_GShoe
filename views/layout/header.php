@@ -133,13 +133,13 @@
                                                                 </span></p>
                                                         </div>
                                                     </li><?php
-                                                    $tongTien = 0;
-                                                    if ($sanPham['gia_khuyen_mai']) {
-                                                        $tongTien = $sanPham['gia_khuyen_mai'] * $sanPham['so_luong'];
-                                                    } else {
-                                                        $tongTien = $sanPham['gia_san_pham'] * $sanPham['so_luong'];
-                                                    }
-                                                    $tongGioHang += $tongTien;?>
+                                                            $tongTien = 0;
+                                                            if ($sanPham['gia_khuyen_mai']) {
+                                                                $tongTien = $sanPham['gia_khuyen_mai'] * $sanPham['so_luong'];
+                                                            } else {
+                                                                $tongTien = $sanPham['gia_san_pham'] * $sanPham['so_luong'];
+                                                            }
+                                                            $tongGioHang += $tongTien; ?>
                                                 <?php endforeach ?>
                                             </ul>
                                             <div class="bottom">
@@ -184,8 +184,12 @@
                                             <!-- Nút tài khoản -->
                                             <div class="bottom">
                                                 <div class="button">
-                                                    <a href="<?= BASE_URL . '?act=detail-account-khach-hang' ?>" class="btn animate">Tài
-                                                        khoản</a>
+                                                    <a href="<?= BASE_URL . '?act=detail-account-khach-hang' ?>" class="btn animate">Tài khoản</a>
+                                                </div>
+                                            </div>
+                                            <div class="bottom">
+                                                <div class="button">
+                                                    <a href="<?= BASE_URL . '?act=lich-su-mua-hang' ?>" class="btn animate">Đơn hàng</a>
                                                 </div>
                                             </div>
 
