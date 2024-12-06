@@ -35,6 +35,21 @@ class HomeController
     }
     public function chiTietSanPham()
     {
+        if (isset($_SESSION['user-account'])) {
+            $email = $this->modelTaiKhoan->getTaiKhoanFormEmail($_SESSION['user-account']);
+
+            $gioHang = $this->modelGioHang->getGioHangFormUser($email['id']);
+            if (!$gioHang) {
+                $gioHangId = $this->modelGioHang->addGiohang($email['id']);
+                $gioHang = ['id' => $gioHangId];
+                $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+            } else {
+                $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
+            }
+        } else {
+            var_dump('Loi chua dang nhap');
+            die;
+        }
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
         $id = $_GET['id_san_pham'];
         $sanPham = $this->modelSanPham->getDetailSanPham($id);
