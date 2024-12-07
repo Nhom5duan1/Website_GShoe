@@ -1,4 +1,5 @@
 <?php include_once './views/layout/header.php'; ?><!-- header -->
+<?php include_once './views/layout/menu.php'; ?>
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
     <div class="container">
@@ -40,7 +41,7 @@
                         </div>
                         <div class="form-group input-group">
                             <label for="reg-fn">Password</label>
-                            <input name="password" class="form-control" type="password" id="password" required>
+                            <input name="password" class="form-control" type="password" id="password" required autocomplete="current-password">
                         </div>
                         <div class="d-flex flex-wrap justify-content-between bottom-content">
                             <div class="form-check">

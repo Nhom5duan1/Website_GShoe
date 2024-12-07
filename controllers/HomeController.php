@@ -46,10 +46,8 @@ class HomeController
             } else {
                 $chiTietGioHang = $this->modelGioHang->getDetailGioHang($gioHang['id']);
             }
-        } else {
-            var_dump('Loi chua dang nhap');
-            die;
         }
+
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
         $id = $_GET['id_san_pham'];
         $sanPham = $this->modelSanPham->getDetailSanPham($id);
@@ -65,12 +63,16 @@ class HomeController
     }
     public function formLogin()
     {
+        $listSanPham = $this->modelSanPham->getAllSanPham();
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
         require_once './views/auth/login.php';
 
         deleteSessionE();
     }
     public function formRegister()
     {
+        $listSanPham = $this->modelSanPham->getAllSanPham();
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
         require_once './views/auth/register.php';
         deleteSessionE();
     }
@@ -108,6 +110,8 @@ class HomeController
     }
     public function detailAccountKhachHang()
     {
+        $listSanPham = $this->modelSanPham->getAllSanPham();
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
         $email = $_SESSION['user-account'];
         $detailAccount = $this->modelTaiKhoan->getTaiKhoanFormEmail($email);
         require_once './views/auth/detail-account.php';
@@ -186,11 +190,13 @@ class HomeController
     {
         $listSanPham = $this->modelSanPham->getAllSanPham();
         $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
-        $SanPhamDanhMucId = $this->modelSanPham->sanPhamTheo($listDanhMuc['danh_muc_id']);
+        // $SanPhamDanhMucId = $this->modelSanPham->sanPhamTheo($listDanhMuc['danh_muc_id']);
         require_once './views/listSanPham.php';
     }
     public function cart()
     {
+        $listSanPham = $this->modelSanPham->getAllSanPham();
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
         if (isset($_SESSION['user-account'])) {
             $email = $this->modelTaiKhoan->getTaiKhoanFormEmail($_SESSION['user-account']);
 
@@ -212,6 +218,8 @@ class HomeController
     }
     public function thanhToan()
     {
+        $listSanPham = $this->modelSanPham->getAllSanPham();
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
         if (isset($_SESSION['user-account'])) {
             $user = $this->modelTaiKhoan->getTaiKhoanFormEmail($_SESSION['user-account']);
 
@@ -264,8 +272,9 @@ class HomeController
                 header("Location:" . BASE_URL . '?act=gio-hang');
                 die;
             } else {
-                var_dump('Loi chua dang nhap');
-                die;
+                echo "<script>alert('Vui lòng đăng nhập!');</script>";
+                require_once './views/auth/login.php';
+                exit();
             }
         }
     }
@@ -330,6 +339,8 @@ class HomeController
     }
     public function lichSuMuaHang()
     {
+        $listSanPham = $this->modelSanPham->getAllSanPham();
+        $listDanhMuc = $this->modelSanPham->getAllDanhMuc();
         if (isset($_SESSION['user-account'])) {
             $email = $this->modelTaiKhoan->getTaiKhoanFormEmail($_SESSION['user-account']);
 
