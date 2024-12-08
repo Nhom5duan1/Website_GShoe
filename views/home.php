@@ -303,19 +303,18 @@
                 <div class="single-blog">
                     <div class="blog-img">
                         <a href="blog-single-sidebar.html">
-                            <img src="assets/images/blog/blog-1.jpg" alt="#">
+                            <img src="assets/images/blog/lv-trainer.avif" alt="#">
                         </a>
                     </div>
                     <div class="blog-content">
-                        <a class="category" href="javascript:void(0)">eCommerce</a>
+                        <a class="category" href="javascript:void(0)">LV-Trainer</a>
                         <h4>
-                            <a href="blog-single-sidebar.html">What information is needed for shipping?</a>
+                            <a href="blog-single-sidebar.html">Cảm nhận của khách hàng về sản phẩm</a>
                         </h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt.</p>
-                        <div class="button">
+                        <p>Chất lượng giày đẹp, độ hoàn thiện tốt, shop phục vụ nhiệt, sẽ quay lại ủng hộ</p>
+                        <!-- <div class="button">
                             <a href="javascript:void(0)" class="btn">Read More</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- End Single Blog -->
@@ -325,19 +324,18 @@
                 <div class="single-blog">
                     <div class="blog-img">
                         <a href="blog-single-sidebar.html">
-                            <img src="assets/images/blog/blog-2.jpg" alt="#">
+                            <img src="assets/images/blog/balenciaga-track.avif" alt="#">
                         </a>
                     </div>
                     <div class="blog-content">
-                        <a class="category" href="javascript:void(0)">Gaming</a>
+                        <a class="category" href="javascript:void(0)">Balenciaga Track</a>
                         <h4>
-                            <a href="blog-single-sidebar.html">Interesting fact about gaming consoles</a>
+                            <a href="blog-single-sidebar.html">Cảm nhận của khách hàng về sản phẩm</a>
                         </h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt.</p>
-                        <div class="button">
+                        <p>Chất liệu cao cấp, thiết kế đẹp, thi công chắc chắn, phù hợp với đi chơi và đi học đáng tiền</p>
+                        <!-- <div class="button">
                             <a href="javascript:void(0)" class="btn">Read More</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- End Single Blog -->
@@ -347,20 +345,19 @@
                 <div class="single-blog">
                     <div class="blog-img">
                         <a href="blog-single-sidebar.html">
-                            <img src="assets/images/blog/blog-3.jpg" alt="#">
+                            <img src="assets/images/blog/adidas-samba.webp" alt="#">
                         </a>
                     </div>
                     <div class="blog-content">
-                        <a class="category" href="javascript:void(0)">Electronic</a>
+                        <a class="category" href="javascript:void(0)">Adidas Samba</a>
                         <h4>
-                            <a href="blog-single-sidebar.html">Electronics, instrumentation & control engineering
+                            <a href="blog-single-sidebar.html">Cảm nhận của khách hàng về sản phẩm
                             </a>
                         </h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt.</p>
-                        <div class="button">
+                        <p>Đôi sneaker này ghi điểm với thiết kế tối giản nhưng vẫn rất hiện đại, phù hợp cho cả nam và nữ..</p>
+                        <!-- <div class="button">
                             <a href="javascript:void(0)" class="btn">Read More</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- End Single Blog -->
