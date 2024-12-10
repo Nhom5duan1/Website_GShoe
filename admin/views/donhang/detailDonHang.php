@@ -87,7 +87,7 @@
             <div class="row">
               <div class="col-12">
                 <h4>
-                  <i class="fas fa-dog"></i> PetPalace.
+                  GShoe.
                   <small class="float-right">Ngày đặt: <?= formatDate($donHang['ngay_dat']); ?></small>
                 </h4>
               </div>
@@ -98,10 +98,10 @@
               <div class="col-sm-4 invoice-col">
                 Nơi gửi
                 <address>
-                  <strong>PetPalace.</strong><br>
+                  <strong>GShoe Shop.</strong><br>
                   Số 13, đường Trịnh Văn Bô, Hà Nội<br>
                   Phone: +84 987 654 321<br>
-                  Email: PetPalace@gmail.com
+                  Email: GShoe@gmail.com
                 </address>
               </div>
               <!-- /.col -->

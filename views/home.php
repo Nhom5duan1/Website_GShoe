@@ -39,7 +39,7 @@
             <div class="col-12">
                 <div class="section-title">
                     <h2>Danh mục sản phẩm</h2>
-                    <p>Toàn bộ danh mục sản phẩm sẽ được cập nhật hằng ngày.</p>
+                    <p>Toàn bộ danh mục sản phẩm hiện có.</p>
                 </div>
             </div>
         </div>
@@ -82,8 +82,7 @@
             <div class="col-12">
                 <div class="section-title">
                     <h2>Top sản phẩm</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                        suffered alteration in some form.</p>
+                    <p>Sản phẩm luôn được cập nhật.</p>
                 </div>
             </div>
         </div>
@@ -95,7 +94,7 @@
                         <div class="product-image">
                             <img style="width: 288px; height: 286.40px; " src="<?= BASE_URL . $sanPham['hinh_anh']; ?>" alt="#">
                             <div class="button">
-                                <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
+                                <a href="<?= BASE_URL . '?act=chi-tiet-san-pham&id_san_pham=' . $sanPham['id'] ?>" class="btn"><i class="lni lni-cart"></i> Chi tiết</a>
                             </div>
                         </div>
                         <div class="product-info">
@@ -140,11 +139,11 @@
                 <!-- Start Single List -->
                 <div class="single-list">
                     <div class="list-image">
-                        <a href="product-grids.html"><img src="assets/images/home-product-list/AIR+FORCE+1+'07.png" alt="#"></a>
+                        <a href="#"><img src="assets/images/home-product-list/AIR+FORCE+1+'07.png" alt="#"></a>
                     </div>
                     <div class="list-info">
                         <h3>
-                            <a href="product-grids.html">Nike Air Force 1'07</a>
+                            <a href="#">Nike Air Force 1'07</a>
                         </h3>
                         <span>2.929.000đ</span>
                     </div>
@@ -153,11 +152,11 @@
                 <!-- Start Single List -->
                 <div class="single-list">
                     <div class="list-image">
-                        <a href="product-grids.html"><img src="assets/images/home-product-list/Giay-Air-Jordan-1-Low-Triple-White-553558-130.jpg.webp" alt="#"></a>
+                        <a href="#"><img src="assets/images/home-product-list/Giay-Air-Jordan-1-Low-Triple-White-553558-130.jpg.webp" alt="#"></a>
                     </div>
                     <div class="list-info">
                         <h3>
-                            <a href="product-grids.html">Nike Air Jordan 1 Low Triple White</a>
+                            <a href="#">Nike Air Jordan 1 Low Triple White</a>
                         </h3>
                         <span>2.990.000đ</span>
                     </div>
@@ -166,11 +165,11 @@
                 <!-- Start Single List -->
                 <div class="single-list">
                     <div class="list-image">
-                        <a href="product-grids.html"><img src="assets/images/home-product-list/adidas-samba.webp" alt="#"></a>
+                        <a href="#"><img src="assets/images/home-product-list/adidas-samba.webp" alt="#"></a>
                     </div>
                     <div class="list-info">
                         <h3>
-                            <a href="product-grids.html">Giày Thể Thao Adidas Samba</a>
+                            <a href="#">Giày Thể Thao Adidas Samba</a>
                         </h3>
                         <span>3.290.000đ</span>
                     </div>
@@ -182,11 +181,11 @@
                 <!-- Start Single List -->
                 <div class="single-list">
                     <div class="list-image">
-                        <a href="product-grids.html"><img src="assets/images/home-product-list/lv-trainer.avif" alt="#"></a>
+                        <a href="#"><img src="assets/images/home-product-list/lv-trainer.avif" alt="#"></a>
                     </div>
                     <div class="list-info">
                         <h3>
-                            <a href="product-grids.html">Giày Thể Thao LV Trainer</a>
+                            <a href="#">Giày Thể Thao LV Trainer</a>
                         </h3>
                         <span>4.990.000đ</span>
                     </div>
@@ -195,11 +194,11 @@
                 <!-- Start Single List -->
                 <div class="single-list">
                     <div class="list-image">
-                        <a href="product-grids.html"><img src="assets/images/home-product-list/gucci-beige.webp" alt="#"></a>
+                        <a href="#"><img src="assets/images/home-product-list/gucci-beige.webp" alt="#"></a>
                     </div>
                     <div class="list-info">
                         <h3>
-                            <a href="product-grids.html">Giày Sneaker Nam Gucci Beige</a>
+                            <a href="#">Giày Sneaker Nam Gucci Beige</a>
                         </h3>
                         <span>7.950.000đ</span>
                     </div>
@@ -208,11 +207,11 @@
                 <!-- Start Single List -->
                 <div class="single-list">
                     <div class="list-image">
-                        <a href="product-grids.html"><img src="assets/images/home-product-list/balenciaga-track.avif" alt="#"></a>
+                        <a href="#"><img src="assets/images/home-product-list/balenciaga-track.avif" alt="#"></a>
                     </div>
                     <div class="list-info">
                         <h3>
-                            <a href="product-grids.html">Balenciaga Track</a>
+                            <a href="#">Balenciaga Track</a>
                         </h3>
                         <span>9.900.000đ</span>
                     </div>
@@ -224,11 +223,11 @@
                 <!-- Start Single List -->
                 <div class="single-list">
                     <div class="list-image">
-                        <a href="product-grids.html"><img src="assets/images/home-product-list/converse-X.webp" alt="#"></a>
+                        <a href="#"><img src="assets/images/home-product-list/converse-X.webp" alt="#"></a>
                     </div>
                     <div class="list-info">
                         <h3>
-                            <a href="product-grids.html">Converse x Comme des Garçons Chuck 70</a>
+                            <a href="#">Converse x Comme des Garçons Chuck 70</a>
                         </h3>
                         <span>3.100.000đ</span>
                     </div>
@@ -237,11 +236,11 @@
                 <!-- Start Single List -->
                 <div class="single-list">
                     <div class="list-image">
-                        <a href="product-grids.html"><img src="assets/images/home-product-list/vans-old-skool.webp" alt="#"></a>
+                        <a href="#"><img src="assets/images/home-product-list/vans-old-skool.webp" alt="#"></a>
                     </div>
                     <div class="list-info">
                         <h3>
-                            <a href="product-grids.html">Vans old skool classic black/white</a>
+                            <a href="#">Vans old skool classic black/white</a>
                         </h3>
                         <span>1.572.000đ</span>
                     </div>
@@ -250,11 +249,11 @@
                 <!-- Start Single List -->
                 <div class="single-list">
                     <div class="list-image">
-                        <a href="product-grids.html"><img src="assets/images/home-product-list/Giay_run_72.avif" alt="#"></a>
+                        <a href="#"><img src="assets/images/home-product-list/Giay_run_72.avif" alt="#"></a>
                     </div>
                     <div class="list-info">
                         <h3>
-                            <a href="product-grids.html">Giày Run 72</a>
+                            <a href="#">Giày Run 72</a>
                         </h3>
                         <span>3.000.000đ</span>
                     </div>
@@ -304,19 +303,18 @@
                 <div class="single-blog">
                     <div class="blog-img">
                         <a href="blog-single-sidebar.html">
-                            <img src="assets/images/blog/blog-1.jpg" alt="#">
+                            <img src="assets/images/blog/lv-trainer.avif" alt="#">
                         </a>
                     </div>
                     <div class="blog-content">
-                        <a class="category" href="javascript:void(0)">eCommerce</a>
+                        <a class="category" href="javascript:void(0)">LV-Trainer</a>
                         <h4>
-                            <a href="blog-single-sidebar.html">What information is needed for shipping?</a>
+                            <a href="blog-single-sidebar.html">Cảm nhận của khách hàng về sản phẩm</a>
                         </h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt.</p>
-                        <div class="button">
+                        <p>Chất lượng giày đẹp, độ hoàn thiện tốt, shop phục vụ nhiệt, sẽ quay lại ủng hộ</p>
+                        <!-- <div class="button">
                             <a href="javascript:void(0)" class="btn">Read More</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- End Single Blog -->
@@ -326,19 +324,18 @@
                 <div class="single-blog">
                     <div class="blog-img">
                         <a href="blog-single-sidebar.html">
-                            <img src="assets/images/blog/blog-2.jpg" alt="#">
+                            <img src="assets/images/blog/balenciaga-track.avif" alt="#">
                         </a>
                     </div>
                     <div class="blog-content">
-                        <a class="category" href="javascript:void(0)">Gaming</a>
+                        <a class="category" href="javascript:void(0)">Balenciaga Track</a>
                         <h4>
-                            <a href="blog-single-sidebar.html">Interesting fact about gaming consoles</a>
+                            <a href="blog-single-sidebar.html">Cảm nhận của khách hàng về sản phẩm</a>
                         </h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt.</p>
-                        <div class="button">
+                        <p>Chất liệu cao cấp, thiết kế đẹp, thi công chắc chắn, phù hợp với đi chơi và đi học đáng tiền</p>
+                        <!-- <div class="button">
                             <a href="javascript:void(0)" class="btn">Read More</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- End Single Blog -->
@@ -348,20 +345,19 @@
                 <div class="single-blog">
                     <div class="blog-img">
                         <a href="blog-single-sidebar.html">
-                            <img src="assets/images/blog/blog-3.jpg" alt="#">
+                            <img src="assets/images/blog/adidas-samba.webp" alt="#">
                         </a>
                     </div>
                     <div class="blog-content">
-                        <a class="category" href="javascript:void(0)">Electronic</a>
+                        <a class="category" href="javascript:void(0)">Adidas Samba</a>
                         <h4>
-                            <a href="blog-single-sidebar.html">Electronics, instrumentation & control engineering
+                            <a href="blog-single-sidebar.html">Cảm nhận của khách hàng về sản phẩm
                             </a>
                         </h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt.</p>
-                        <div class="button">
+                        <p>Đôi sneaker này ghi điểm với thiết kế tối giản nhưng vẫn rất hiện đại, phù hợp cho cả nam và nữ..</p>
+                        <!-- <div class="button">
                             <a href="javascript:void(0)" class="btn">Read More</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- End Single Blog -->
